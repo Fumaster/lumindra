@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sunshooters Case Study | Lumindra Bali | Mark Tulloch</title>
+  <meta name="description" content="How Lumindra is applying AI, automation, and business systems thinking inside Sunshooters Bar & Grill in Legian, Bali — a live real-world case study." />
+  <meta name="keywords" content="Sunshooters Bar Grill Bali, Lumindra case study, AI hospitality Bali, Mark Tulloch, AI Bali restaurant, business systems Bali" />
+  <meta name="author" content="Mark Tulloch" />
+  <meta property="og:title" content="Sunshooters Case Study | Lumindra — AI Systems in a Real Bali Business" />
+  <meta property="og:description" content="How AI, clarity, and systems thinking are being applied inside a real Bali venue. Sunshooters Bar & Grill, Legian." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://lumindra.co/case-study-sunshooters.html" />
+  <style>
+    :root {
+      --bg: #16271A;
+      --card: #1e3323;
+      --text: #f5f0e8;
+      --muted: #c8bfa8;
+      --line: rgba(201,162,75,.18);
+      --gold: #C9A24B;
+      --accent: #d4b06a;
+      --shadow: 0 20px 50px rgba(0,0,0,.35);
+      --radius: 18px;
+      --max: 1000px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+    /* NAV */
+    .nav {
+      position: sticky; top: 0; z-index: 20;
+      backdrop-filter: blur(14px);
+      background: rgba(22,39,26,.82);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; min-height: 70px; }
+    .brand {
+      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+      font-size: 1rem; font-weight: 700; letter-spacing: .32em; text-transform: uppercase; color: var(--text);
+    }
+    .brand span { color: var(--gold); }
+    .back-link { color: var(--gold); font-size: .93rem; font-weight: 600; }
+    .back-link:hover { text-decoration: underline; }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 12px 22px; border-radius: 999px; font-weight: 700; font-size: .92rem;
+      transition: .2s; border: 1px solid transparent;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold), var(--accent));
+      color: #16271A; box-shadow: var(--shadow);
+    }
+    .btn-primary:hover { transform: translateY(-1px); filter: brightness(1.06); }
+    .btn-secondary {
+      border-color: rgba(201,162,75,.42); color: var(--text); background: rgba(201,162,75,.06);
+    }
+    .btn-secondary:hover { background: rgba(201,162,75,.12); }
+
+    /* HERO */
+    .hero { padding: 80px 0 56px; border-bottom: 1px solid var(--line); }
+    .eyebrow {
+      display: inline-block; padding: 7px 14px; margin-bottom: 18px;
+      border: 1px solid rgba(201,162,75,.35); border-radius: 999px;
+      color: var(--gold); font-size: .8rem; font-weight: 700;
+      letter-spacing: .09em; text-transform: uppercase; background: rgba(201,162,75,.07);
+    }
+    h1 {
+      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
+      line-height: 1.1; letter-spacing: -.02em;
+      margin-bottom: 20px; max-width: 820px;
+    }
+    .intro { color: var(--muted); font-size: 1.08rem; max-width: 760px; margin-bottom: 28px; }
+
+    /* STAT STRIP */
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 40px 0 0; }
+    .stat-item {
+      background: rgba(201,162,75,.07); border: 1px solid var(--line);
+      border-radius: 14px; padding: 20px 22px;
+    }
+    .stat-item .num {
+      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+      font-size: 2rem; color: var(--gold); font-weight: 700; line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-item .label { color: var(--muted); font-size: .92rem; }
+
+    /* SECTIONS */
+    section { padding: 60px 0; border-top: 1px solid rgba(201,162,75,.10); }
+    h2 {
+      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+      font-size: clamp(1.6rem, 3vw, 2.3rem);
+      line-height: 1.15; letter-spacing: -.02em;
+      color: var(--gold); margin-bottom: 20px;
+    }
+    h3 {
+      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+      font-size: 1.2rem; color: var(--text); margin-bottom: 12px;
+    }
+    p { color: var(--muted); margin-bottom: 16px; font-size: 1rem; }
+    p:last-child { margin-bottom: 0; }
+
+    /* TWO COL */
+    .twocol { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 24px; }
+    .box {
+      background: rgba(201,162,75,.05); border: 1px solid var(--line);
+      border-radius: 16px; padding: 24px;
+    }
+    .box ul { padding-left: 18px; color: var(--muted); font-size: .96rem; }
+    .box li { margin: 8px 0; }
+
+    /* INSIGHT BLOCKS */
+    .insights { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .insight {
+      background: rgba(201,162,75,.04); border: 1px solid var(--line);
+      border-radius: 14px; padding: 22px;
+      border-left: 3px solid var(--gold);
+    }
+    .insight h4 {
+      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+      color: var(--gold); font-size: 1rem; margin-bottom: 8px;
+    }
+    .insight p { font-size: .93rem; }
+
+    /* HIGHLIGHT BOX */
+    .highlight {
+      background: linear-gradient(135deg, rgba(201,162,75,.12), rgba(201,162,75,.04));
+      border: 1px solid rgba(201,162,75,.35); border-radius: var(--radius);
+      padding: 30px 34px; margin: 30px 0;
+    }
+    .highlight p { color: var(--text); font-size: 1.05rem; font-style: italic; }
+    .highlight .attribution { color: var(--gold); font-size: .9rem; font-style: normal; margin-top: 10px; margin-bottom: 0; }
+
+    /* CTA */
+    .cta-strip {
+      text-align: center; padding: 60px 0 80px;
+      border-top: 1px solid rgba(201,162,75,.10);
+    }
+    .cta-strip h2 { color: var(--text); }
+    .cta-strip p { color: var(--muted); max-width: 580px; margin: 0 auto 28px; }
+    .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+    /* FOOTER */
+    footer { border-top: 1px solid var(--line); padding: 28px 0 44px; }
+    .footer-grid { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: center; }
+    .footer-brand {
+      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+      font-size: .97rem; letter-spacing: .28em; text-transform: uppercase;
+    }
+    .footer-brand span { color: var(--gold); }
+    .small { color: var(--muted); font-size: .9rem; }
+
+    @media (max-width: 700px) {
+      .twocol, .insights, .stats { grid-template-columns: 1fr; }
+      .wrap { padding: 0 18px; }
+      .hero { padding-top: 56px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html">L U M I N <span>D R A</span></a>
+      <a class="back-link" href="index.html">&larr; Back to Lumindra</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Live Case Study &middot; Lumindra in Action</div>
+      <h1>How AI, Clarity, and Systems Thinking Are Being Applied Inside a Real Bali Venue</h1>
+      <p class="intro">
+        Sunshooters Bar &amp; Grill in Legian, Bali is more than a sports bar. It is also the live environment where every Lumindra system is tested, refined, and pressure-checked before it is ever recommended to a client.
+      </p>
+      <div class="stats">
+        <div class="stat-item">
+          <div class="num">4.9★</div>
+          <div class="label">GoFood rating &middot; Top Service badge</div>
+        </div>
+        <div class="stat-item">
+          <div class="num">11</div>
+          <div class="label">Staff managed through Lumindra systems</div>
+        </div>
+        <div class="stat-item">
+          <div class="num">Live</div>
+          <div class="label">AI, WhatsApp automation &amp; Ops Dashboard active</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section>
+      <div class="wrap">
+        <h2>The Business</h2>
+        <p>
+          <strong>Sunshooters Bar &amp; Grill</strong> is a sports bar and grill located in Legian, Bali, operating with an 11-person team. It is a full-service hospitality venue running food delivery through GoFood and GrabFood, managing a live-sports calendar across multiple time zones (NRL, AFL, UFC, EPL, NBA), and operating in one of the most competitive F&amp;B strips in Bali.
+        </p>
+        <p>
+          Mark Tulloch, founder of Lumindra, operates Sunshooters directly. This means every system built for the bar has to survive real business pressure — not just look good in a proposal.
+        </p>
+
+        <div class="highlight">
+          <p>"Most consultants advise from the sidelines. I built Lumindra's systems inside a live venue where they had to actually work. That is what makes the advice different."</p>
+          <p class="attribution">— Mark Tulloch, Founder of Lumindra</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>The Challenges</h2>
+        <p>Like most Bali hospitality businesses, the pressure points were real and expensive.</p>
+        <div class="twocol">
+          <div class="box">
+            <h3>Operational friction</h3>
+            <ul>
+              <li>Inconsistent team communication</li>
+              <li>Manual order tracking across delivery platforms</li>
+              <li>Heavy admin load on the owner</li>
+              <li>Reactive decision-making instead of proactive management</li>
+              <li>No single view of daily business performance</li>
+            </ul>
+          </div>
+          <div class="box">
+            <h3>Visibility &amp; marketing gaps</h3>
+            <ul>
+              <li>Inconsistent digital presence across platforms</li>
+              <li>Manual content creation consuming significant time</li>
+              <li>Delivery platform listings not optimised</li>
+              <li>No structured customer retention system</li>
+              <li>Sports schedule communication disjointed</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>The Lumindra Approach</h2>
+        <p>Rather than adding complexity, the focus was on clarity and practical systems that staff could actually use.</p>
+        <div class="twocol">
+          <div class="box">
+            <h3>AI &amp; Automation layer</h3>
+            <ul>
+              <li>WhatsApp Business AI agent built and deployed</li>
+              <li>Nine quick-reply commands: /menu, /happy, /book, /sport, /order, /smoothie, /villa, /where, /direct</li>
+              <li>Automated greeting and away message flows</li>
+              <li>AI-assisted content planning and scheduling</li>
+              <li>Delivery platform optimisation and menu audit</li>
+            </ul>
+          </div>
+          <div class="box">
+            <h3>Operations Command Centre</h3>
+            <ul>
+              <li>Custom dashboard pulling real-time POS, financials, stock, and roster data</li>
+              <li>Daily AI summary and three priority actions</li>
+              <li>Staff operations guide built as a reusable template</li>
+              <li>Structured morning briefing process</li>
+              <li>Task tracking, maintenance log, marketing pipeline in Notion</li>
+            </ul>
+          </div>
+        </div>
+        <p style="margin-top: 8px;">Every element was designed to reduce the owner's cognitive load and create consistent daily execution without hiring a management layer.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>What This Proves in Practice</h2>
+        <p>Working inside a live venue reinforces a set of core truths that no amount of theory can replicate.</p>
+        <div class="insights">
+          <div class="insight">
+            <h4>Clarity beats complexity</h4>
+            <p>Most businesses do not need more tools. They need better structure. The biggest wins at Sunshooters came from simplification, not addition.</p>
+          </div>
+          <div class="insight">
+            <h4>AI is only useful when tied to real workflow</h4>
+            <p>The value is not in the software itself. It is in how it reduces friction, eliminates repeated manual work, and improves consistency under pressure.</p>
+          </div>
+          <div class="insight">
+            <h4>The founder's state affects the system</h4>
+            <p>When the leader is overloaded, the business becomes reactive. Founder clarity and business clarity are inseparable — which is why Conscious Systems runs alongside the operational work.</p>
+          </div>
+          <div class="insight">
+            <h4>Small changes compound fast</h4>
+            <p>Better communication, tighter routines, stronger content, and clearer decisions each create modest improvement individually. Together, they create measurable lift across the business.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>What Clients Get From This</h2>
+        <p>
+          When Lumindra works with a client, the frameworks being applied are not recycled internet advice. They are systems shaped by active business conditions — operational pressure, human behaviour, real implementation constraints, and hands-on refinement.
+        </p>
+        <p>
+          Many consultants can explain AI. Far fewer can apply it inside a real business where staff need clear instructions, decisions affect daily trade, content has to be produced consistently, and systems must survive pressure — not just sound good in a meeting.
+        </p>
+        <p>
+          Sunshooters gives Lumindra's clients a concrete reference point: here is a real Bali business, here is what was applied, here is how it runs now.
+        </p>
+        <div class="twocol" style="margin-top: 28px;">
+          <div class="box">
+            <h3>Systems proven at Sunshooters</h3>
+            <ul>
+              <li>WhatsApp AI agent setup</li>
+              <li>Staff operations guide template</li>
+              <li>Delivery platform audit &amp; optimisation</li>
+              <li>Daily ops dashboard</li>
+              <li>Content planning system</li>
+              <li>Morning briefing process</li>
+            </ul>
+          </div>
+          <div class="box">
+            <h3>Available to Lumindra clients</h3>
+            <ul>
+              <li>Adapted version of all Sunshooters systems</li>
+              <li>Staff-ready documentation</li>
+              <li>Custom WhatsApp flows for your business type</li>
+              <li>AI content system setup</li>
+              <li>Owner command dashboard build</li>
+              <li>Ongoing advisory and refinement</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="cta-strip">
+    <div class="wrap">
+      <h2>Want to see what this looks like in your business?</h2>
+      <p>Every system Lumindra recommends has been tested under real Bali business conditions. No recycled theory.</p>
+      <div class="cta-btns">
+        <a class="btn btn-primary" href="https://wa.me/6282144029645?text=Hi%20Mark%2C%20I%20read%20the%20Sunshooters%20case%20study%20and%20I%27d%20like%20to%20talk%20about%20my%20business." target="_blank" rel="noopener">Talk to Mark on WhatsApp</a>
+        <a class="btn btn-secondary" href="index.html">Back to Lumindra</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <div>
+        <div class="footer-brand">L U M I N <span>D R A</span></div>
+        <div class="small">Kerobokan / Legian, Bali &middot; Mark Tulloch, Founder</div>
+      </div>
+      <div class="small">
+        WhatsApp: +62 821-4402-9645 &middot; <a href="mailto:Connect@baliaiconsultant.com" style="color:var(--gold)">Connect@baliaiconsultant.com</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

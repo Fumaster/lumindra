@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumindra | AI Consultant Bali | Mark Tulloch</title>
+  <meta name="description" content="Lumindra is a Bali-based AI consulting and business systems practice led by Mark Tulloch, former COO of Bali Realty. Practical AI, clarity, and implementation for real businesses." />
+  <meta name="keywords" content="Bali AI consultant, AI Bali, Mark Tulloch, Lumindra, Conscious Systems, hospitality AI, AI implementation Bali, business systems Bali, Bali business consultant" />
+  <meta name="author" content="Mark Tulloch" />
+  <meta property="og:title" content="Lumindra | AI Consultant Bali | Mark Tulloch" />
+  <meta property="og:description" content="Practical AI, clarity, and business systems for real businesses in Bali. Led by Mark Tulloch, former COO of Bali Realty." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lumindra.co" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="manifest" href="manifest.json" />
+  <style>
+    :root {
+      --bg: #16271A;
+      --bg2: #1a2f1e;
+      --card: #1e3323;
+      --text: #f5f0e8;
+      --muted: #c8bfa8;
+      --line: rgba(201,162,75,.18);
+      --gold: #C9A24B;
+      --accent: #d4b06a;
+      --shadow: 0 20px 50px rgba(0,0,0,.35);
+      --radius: 18px;
+      --max: 1140px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+    /* NAV */
+    .nav {
+      position: sticky; top: 0; z-index: 20;
+      backdrop-filter: blur(14px);
+      background: rgba(22,39,26,.82);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      min-height: 72px;
+    }
+    .brand {
+      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+      font-size: 1.05rem; font-weight: 700; letter-spacing: .32em; text-transform: uppercase; color: var(--text);
+    }
+    .brand span { color: var(--gold); }
+    .nav-links { display: flex; gap: 26px; align-items: center; }
+    .nav-links a { font-size: .93rem; color: var(--muted); transition: color .2s; }
+    .nav-links a:hover { color: var(--gold); }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 13px 22px; border-radius: 999px; font-weight: 700; font-size: .93rem;
+      transition: .2s ease; border: 1px solid transparent; cursor: pointer;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold), var(--accent));
+      color: #16271A; box-shadow: var(--shadow);
+    }
+    .btn-primary:hover { transform: translateY(-1px); filter: brightness(1.06); }
+    .btn-secondary {
+      border-color: rgba(201,162,75,.42);
+      color: var(--text); background: rgba(201,162,75,.06);
+    }
+    .btn-secondary:hover { background: rgba(201,162,75,.12); }
+
+    /* HERO */
+    .hero { padding: 90px 0 72px; }
+    .hero-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 40px; align-items: center; }
+    .eyebrow {
+      display: inline-block; padding: 7px 14px;
+      border: 1px solid rgba(201,162,75,.35); border-radius: 999px;
+      color: var(--gold); font-size: .8rem; font-weight: 700;
+      letter-spacing: .09em; text-transform: uppercase;
+      background: rgba(201,162,75,.07); margin-bottom: 20px;
+    }
+    h1 {
+      margin: 0 0 20px;
+      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      line-height: 1.06; letter-spacing: -.02em; color: var(--text);
+    }
+    .lead { margin: 0 0 28px; font-size: 1.1rem; color: var(--muted); max-width: 740px; }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 26px; }
+    .hero-meta { color: var(--muted); font-size: .94rem; }
+    .hero-card {
+      background: linear-gradient(160deg, rgba(201,162,75,.08), rgba(201,162,75,.02));
+      border: 1px solid var(--line); border-radius: var(--radius);
+      padding: 30px; box-shadow: var(--shadow);
+    }
+    .hero-card h3 {
+      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+      margin: 0 0 16px; font-size: 1.12rem; color: var(--gold);
+    }
+    .hero-card ul { padding-left: 18px; color: var(--muted); }
+    .hero-card li { margin: 9px 0; }
+
+    /* FOUNDER BLOCK — plain text for Google/AI indexing */
+    .founder-block {
+      background: rgba(201,162,75,.06);
+      border: 1px solid var(--line);
+      border-left: 3px solid var(--gold);
+      border-radius: 12px; padding: 24px 28px;
+      margin: 32px 0 0;
+    }
+    .founder-block p { color: var(--muted); font-size: 1rem; line-height: 1.7; }
+    .founder-block strong { color: var(--text); }
+
+    /* TRUST STRIP */
+    .trust-strip { padding: 12px 0 28px; }
+    .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .trust-item {
+      background: rgba(201,162,75,.05);
+      border: 1px solid var(--line); border-radius: 14px; padding: 18px;
+    }
+    .trust-item strong { display: block; margin-bottom: 6px; font-size: .97rem; color: var(--text); }
+    .trust-item span { color: var(--muted); font-size: .92rem; }
+
+    /* SECTIONS */
+    section { padding: 72px 0; border-top: 1px solid rgba(201,162,75,.10); }
+    .section-head { max-width: 760px; margin-bottom: 34px; }
+    .section-head h2 {
+      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+      margin: 0 0 12px;
+      font-size: clamp(1.7rem, 3vw, 2.6rem);
+      line-height: 1.12; letter-spacing: -.02em;
+    }
+    .section-head p { color: var(--muted); font-size: 1rem; }
+    .copy p { color: var(--muted); margin-bottom: 16px; font-size: 1rem; }
+
+    /* CARDS */
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card {
+      background: linear-gradient(180deg, rgba(201,162,75,.05), rgba(201,162,75,.01));
+      border: 1px solid var(--line);
+      border-radius: 18px; padding: 26px; box-shadow: var(--shadow);
+    }
+    .card h3 {
+      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+      margin: 0 0 10px; font-size: 1.1rem; color: var(--gold);
+    }
+    .card p { color: var(--muted); font-size: .96rem; }
+    .list { margin: 12px 0 0; padding-left: 18px; color: var(--muted); font-size: .95rem; }
+    .list li { margin: 7px 0; }
+
+    /* PROOF */
+    .proof { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .proof-box {
+      background: rgba(201,162,75,.04); border: 1px solid var(--line);
+      border-radius: 18px; padding: 26px;
+    }
+    .proof-box h3 {
+      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+      margin: 0 0 14px; color: var(--gold);
+    }
+    .proof-box ul { padding-left: 18px; color: var(--muted); font-size: .96rem; }
+    .proof-box li { margin: 9px 0; }
+    .proof-link {
+      display: inline-block; margin-top: 16px;
+      color: var(--gold); font-weight: 700; font-size: .93rem;
+      border-bottom: 1px solid rgba(201,162,75,.35); padding-bottom: 2px;
+    }
+
+    /* YOUTUBE */
+    .yt-wrap {
+      background: rgba(201,162,75,.04); border: 1px solid var(--line);
+      border-radius: var(--radius); padding: 28px; text-align: center;
+    }
+    .yt-wrap p { color: var(--muted); margin-top: 16px; font-size: .96rem; }
+    .yt-embed { width: 100%; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; }
+    .yt-embed iframe { width: 100%; height: 100%; border: none; }
+    .yt-channel-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      margin-top: 16px; color: var(--gold); font-weight: 700; font-size: .93rem;
+    }
+
+    /* ABOUT */
+    .about { display: grid; grid-template-columns: 1.1fr .9fr; gap: 24px; align-items: start; }
+    .panel {
+      background: rgba(201,162,75,.04); border: 1px solid var(--line);
+      border-radius: 18px; padding: 26px;
+    }
+    .panel h3 {
+      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+      margin: 0 0 14px; color: var(--gold);
+    }
+
+    /* TWOCOL */
+    .twocol { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+
+    /* CTA */
+    .cta { text-align: center; padding: 86px 0; }
+    .cta-box {
+      max-width: 880px; margin: 0 auto; padding: 40px;
+      border-radius: 24px; border: 1px solid rgba(201,162,75,.32);
+      background: linear-gradient(180deg, rgba(201,162,75,.10), rgba(201,162,75,.02));
+      box-shadow: var(--shadow);
+    }
+    .cta h2 {
+      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+      margin: 0 0 14px;
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem); line-height: 1.12;
+    }
+    .cta p { color: var(--muted); margin: 0 auto 28px; max-width: 640px; }
+    .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+    /* FAQ */
+    .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .faq-item {
+      background: rgba(201,162,75,.04); border: 1px solid var(--line);
+      border-radius: 18px; padding: 22px;
+    }
+    .faq-item h3 {
+      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+      margin: 0 0 8px; font-size: 1.05rem; color: var(--gold);
+    }
+    .faq-item p { color: var(--muted); font-size: .95rem; }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 30px 0 48px; color: var(--muted);
+    }
+    .footer-grid { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: flex-start; }
+    .footer-brand {
+      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+      font-size: 1rem; font-weight: 700; letter-spacing: .28em; text-transform: uppercase; color: var(--text);
+      margin-bottom: 6px;
+    }
+    .footer-brand span { color: var(--gold); }
+    .small { font-size: .90rem; }
+    .footer-links { display: flex; gap: 18px; flex-wrap: wrap; }
+    .footer-links a { font-size: .90rem; color: var(--muted); }
+    .footer-links a:hover { color: var(--gold); }
+
+    /* RESPONSIVE */
+    @media (max-width: 980px) {
+      .hero-grid, .about, .proof, .twocol, .faq-grid { grid-template-columns: 1fr; }
+      .cards, .trust-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 680px) {
+      .nav-links { display: none; }
+      .cards, .trust-grid { grid-template-columns: 1fr; }
+      .wrap { padding: 0 18px; }
+      .hero { padding-top: 60px; }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <div class="brand">L U M I N <span>D R A</span></div>
+      <div class="nav-links">
+        <a href="#proof">Proof</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="case-study-sunshooters.html">Case Study</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn-secondary" href="https://wa.me/6282144029645?text=Hi%20Mark%2C%20I%27d%20like%20to%20book%20a%20clarity%20call%20with%20Lumindra." target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">AI Consultant Bali &middot; Real-World Systems</div>
+        <h1>AI Systems Built Inside Real Businesses — Not Just Talked About</h1>
+        <p class="lead">
+          Lumindra helps Bali businesses implement practical AI, automation, and operational systems that save time, reduce waste, and improve performance.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://wa.me/6282144029645?text=Hi%20Mark%2C%20I%27d%20like%20to%20book%20a%20clarity%20call%20with%20Lumindra." target="_blank" rel="noopener">Book a Clarity Call</a>
+          <a class="btn btn-secondary" href="#proof">View Real-World Proof</a>
+        </div>
+        <div class="hero-meta">
+          Former COO, Bali Realty &middot; 35+ years operational experience &middot; Hospitality, property, systems, leadership
+        </div>
+
+        <!-- GOOGLE/AI INDEXABLE FOUNDER BLOCK -->
+        <div class="founder-block">
+          <p>
+            <strong>Mark Tulloch is the founder of Lumindra, a Bali-based AI consulting and business systems practice.</strong>
+            He is a former COO of Bali Realty and has more than 35 years of experience across hospitality, operations, leadership, and business development in Australia, the United Kingdom, and Bali.
+            He currently operates <strong>Sunshooters Bar &amp; Grill</strong> in Legian, Bali, as a live real-world testing environment for AI-driven business systems.
+          </p>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <h3>Built for businesses that need practical traction</h3>
+        <ul>
+          <li>AI audits and implementation for Bali businesses</li>
+          <li>Founder clarity and decision-making support</li>
+          <li>Operational systems shaped inside a live venue</li>
+          <li>In-person in Bali or via Zoom globally</li>
+          <li>WhatsApp-first contact — fast and direct</li>
+        </ul>
+      </aside>
+    </div>
+  </header>
+
+  <div class="trust-strip">
+    <div class="wrap trust-grid">
+      <div class="trust-item">
+        <strong>Led by Mark Tulloch</strong>
+        <span>Former COO, Bali Realty &middot; 35+ years operational experience</span>
+      </div>
+      <div class="trust-item">
+        <strong>Based in Bali</strong>
+        <span>Kerobokan / Legian &middot; In-person or Zoom</span>
+      </div>
+      <div class="trust-item">
+        <strong>Built in the real world</strong>
+        <span>Systems tested inside active businesses, not just presented in decks</span>
+      </div>
+      <div class="trust-item">
+        <strong>Clear starting points</strong>
+        <span>Workshops, audits, implementation, and advisory</span>
+      </div>
+    </div>
+  </div>
+
+  <main>
+
+    <section id="proof">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Real-World Proof</h2>
+          <p>Lumindra is not built on claims alone. It is built on lived operational experience and systems tested in a real business.</p>
+        </div>
+        <div class="proof">
+          <div class="proof-box">
+            <h3>Mark Tulloch — Founder</h3>
+            <ul>
+              <li>Former COO of Bali Realty (Bali's leading property agency)</li>
+              <li>35+ years across hospitality, operations, leadership, and business growth</li>
+              <li>International operating background: Australia, United Kingdom, and Bali</li>
+              <li>MBA (Global), University of Newcastle</li>
+              <li>Published author &middot; Trained crisis counsellor &middot; Public speaker</li>
+              <li>Founding member, Bali AI Founders Club</li>
+            </ul>
+            <a class="proof-link" href="about-mark-tulloch.html">Full profile &rarr;</a>
+          </div>
+          <div class="proof-box">
+            <h3>Live Case Environment</h3>
+            <ul>
+              <li><strong>Sunshooters Bar &amp; Grill</strong> (Legian, Bali) operates as a real-world proving ground for Lumindra's systems</li>
+              <li>AI-driven content, WhatsApp automation, POS integration, and operational workflows tested live</li>
+              <li>Rated 4.9 stars on GoFood &middot; Top Service badge</li>
+              <li>Every system clients receive has been pressure-tested in a real business environment</li>
+            </ul>
+            <a class="proof-link" href="case-study-sunshooters.html">Read the full case study &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Why Lumindra Exists</h2>
+          <p>Most AI advice sounds impressive until it hits the reality of an actual business. Lumindra was built to close that gap.</p>
+        </div>
+        <div class="copy">
+          <p>
+            This is not generic consulting, trend-chasing, or theoretical AI strategy. It is hands-on, grounded implementation built around how real businesses actually operate day to day — team communication, customer flow, content systems, sales process, admin load, and decision-making under pressure.
+          </p>
+          <p>
+            The aim is simple: bring clarity, install useful systems, and create results that can actually be felt in the business.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Services</h2>
+          <p>Clear entry points, practical delivery, and work shaped around the real operating rhythm of the business.</p>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <h3>AI Consulting &amp; Implementation</h3>
+            <p>For Bali businesses that want practical AI adoption without confusion.</p>
+            <ul class="list">
+              <li>AI audits</li>
+              <li>Workflow design</li>
+              <li>Content systems</li>
+              <li>WhatsApp automation</li>
+              <li>Automation mapping</li>
+              <li>Staff onboarding</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Conscious Systems</h3>
+            <p>For founders, operators, and leaders who need clarity, alignment, and better decision-making under pressure.</p>
+            <ul class="list">
+              <li>Clarity Mapping session</li>
+              <li>Founder advisory</li>
+              <li>5-Step Realignment program</li>
+              <li>Strategic reset sessions</li>
+              <li>Couples realignment</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Business Systems Advisory</h3>
+            <p>For businesses needing tighter structure across operations, communication, process flow, and leadership rhythm.</p>
+            <ul class="list">
+              <li>Operational review</li>
+              <li>Systems diagnosis</li>
+              <li>Decision bottleneck analysis</li>
+              <li>Delivery and visibility audit</li>
+              <li>Clarity-led restructuring</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- YOUTUBE SECTION -->
+    <section id="youtube">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Watch the Work in Action</h2>
+          <p>Mark Tulloch shares real-world AI implementation, business systems, and founder clarity content on YouTube.</p>
+        </div>
+        <div class="yt-wrap">
+          <div class="yt-embed">
+            <iframe
+              src="https://www.youtube.com/embed?listType=user_uploads&list=BaliAiConsultant&rel=0"
+              title="Lumindra — Bali AI Consultant | Mark Tulloch"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+          <p>Practical AI for real businesses &middot; Founder clarity &middot; Conscious Systems &middot; Live Bali case studies</p>
+          <a class="yt-channel-link" href="https://youtube.com/@BaliAiConsultant" target="_blank" rel="noopener">
+            View the full channel &rarr;
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <h2>What Makes Lumindra Different</h2>
+          <p>Not hype. Not generic AI talk. Real systems, real pressure, real implementation.</p>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <h3>Real operator, not just an advisor</h3>
+            <p>Mark Tulloch has spent decades inside live business environments — hospitality venues, operational teams, leadership pressure, crisis management, growth, restructuring, and daily execution across multiple countries.</p>
+          </div>
+          <div class="card">
+            <h3>Tested in a live business</h3>
+            <p>Lumindra's systems are actively shaped and pressure-tested inside <strong>Sunshooters Bar &amp; Grill</strong> in Bali, giving clients practical frameworks grounded in real-world use — not just slide decks.</p>
+          </div>
+          <div class="card">
+            <h3>Strategy plus implementation</h3>
+            <p>The goal is to identify what matters, structure it clearly, and help put it into use. The work does not stop at ideas. It stops when the system is running.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap about">
+        <div>
+          <div class="section-head">
+            <h2>About Mark Tulloch</h2>
+            <p>Founder of Lumindra &middot; Bali-based AI consultant and business systems practitioner</p>
+          </div>
+          <div class="copy">
+            <p>
+              <strong>Mark Tulloch is an Australian entrepreneur based in Kerobokan, Bali, with more than 35 years of experience across hospitality management, operations leadership, and business development.</strong>
+            </p>
+            <p>
+              Before founding Lumindra, Mark served as Chief Operating Officer of Bali Realty — Bali's leading property agency — where he led operations across one of the most demanding real estate environments in Southeast Asia.
+            </p>
+            <p>
+              His career spans hospitality operations in the United Kingdom, Australia, and Bali, including high-volume venue management, team leadership, and operational turnaround work. He holds an MBA (Global) from the University of Newcastle, is a published author, trained crisis counsellor, and founding member of the Bali AI Founders Club.
+            </p>
+            <p>
+              Lumindra is the result of that lived experience meeting modern AI and systems design — bringing together practical business intelligence, implementation-focused consulting, and human-centered leadership.
+            </p>
+          </div>
+          <div style="margin-top: 20px;">
+            <a class="btn btn-secondary" href="about-mark-tulloch.html">Full profile &rarr;</a>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>Who this is for</h3>
+          <ul class="list">
+            <li>Bali business owners</li>
+            <li>Hospitality operators</li>
+            <li>Villa and property teams</li>
+            <li>Founders feeling overloaded</li>
+            <li>Leaders needing clarity before scaling</li>
+            <li>Businesses curious about AI but unsure where to start</li>
+          </ul>
+          <h3 style="margin-top: 22px;">Not for</h3>
+          <ul class="list">
+            <li>People looking for hype</li>
+            <li>Businesses wanting abstract slide decks without implementation</li>
+            <li>Anyone expecting one-click AI magic</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <h2>How Engagement Works</h2>
+          <p>Clarity first. Then system design. Then practical implementation.</p>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <h3>1. Clarity first</h3>
+            <p>Start with a call, audit, or mapping session to identify what is actually happening inside the business — before any system is built.</p>
+          </div>
+          <div class="card">
+            <h3>2. System design</h3>
+            <p>Clarify the pressure points, opportunities, and highest-value actions. Build a structured plan grounded in real operating conditions.</p>
+          </div>
+          <div class="card">
+            <h3>3. Practical implementation</h3>
+            <p>Build or guide the systems that reduce friction and improve execution. Refine what works. Remove what does not. Keep the business moving clearly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>FAQ</h2>
+          <p>Direct answers to the questions people ask when they are checking credibility.</p>
+        </div>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h3>Is Lumindra a large agency?</h3>
+            <p>No. Lumindra is led directly by Mark Tulloch. That is intentional. Clients work close to the source, not handed off to a junior team.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Is this theory or real implementation?</h3>
+            <p>The work is grounded in live business use, including systems tested inside Sunshooters Bar &amp; Grill in Legian, Bali — an active operating venue.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Do you only work with hospitality?</h3>
+            <p>No. Hospitality is a core strength, but the work also applies to founders, service businesses, property-related businesses, and operations-heavy teams of all kinds.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Are sessions only in Bali?</h3>
+            <p>No. Sessions are available in Bali (Kerobokan / Legian) and via Zoom for clients anywhere in the world.</p>
+          </div>
+          <div class="faq-item">
+            <h3>How do I get started?</h3>
+            <p>Message directly on WhatsApp. Mark responds personally. No gatekeepers, no pre-qualification forms.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What does a session cost?</h3>
+            <p>Entry points start from Rp 1,000,000 for a Conscious Systems Intensive. AI implementation packages from Rp 2,500,000. Contact directly for a conversation about your situation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="wrap">
+        <div class="cta-box">
+          <h2>If the business feels busy but unclear, that is usually a systems problem.</h2>
+          <p>Lumindra helps bring clarity to the noise, structure to the pressure, and practical AI into the real world of Bali business.</p>
+          <div class="cta-btns">
+            <a class="btn btn-primary" href="https://wa.me/6282144029645?text=Hi%20Mark%2C%20I%27d%20like%20to%20book%20a%20clarity%20call%20with%20Lumindra." target="_blank" rel="noopener">Book a Clarity Call</a>
+            <a class="btn btn-secondary" href="mailto:Connect@baliaiconsultant.com">Email Mark</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <div>
+        <div class="footer-brand">L U M I N <span>D R A</span></div>
+        <div class="small">Practical AI, clarity, and business systems for real businesses in Bali.</div>
+        <div class="small" style="margin-top:6px;">Mark Tulloch &middot; Founder &middot; Former COO, Bali Realty</div>
+      </div>
+      <div>
+        <div class="footer-links">
+          <a href="#services">Services</a>
+          <a href="#proof">Proof</a>
+          <a href="case-study-sunshooters.html">Case Study</a>
+          <a href="about-mark-tulloch.html">About</a>
+          <a href="https://youtube.com/@BaliAiConsultant" target="_blank" rel="noopener">YouTube</a>
+        </div>
+        <div class="small" style="margin-top:14px;">
+          Kerobokan / Legian, Bali &middot; WhatsApp: +62 821-4402-9645 &middot; <a href="mailto:Connect@baliaiconsultant.com" style="color:var(--gold)">Connect@baliaiconsultant.com</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    }
+  </script>
+</body>
+</html>
