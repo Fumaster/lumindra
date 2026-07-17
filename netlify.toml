@@ -1,0 +1,16 @@
+# Static HTML site — no application build.
+#
+# The "User Agent Blocker" Netlify extension auto-injects an edge function
+# (`ua_blocker_ef`) during the onPreBuild stage whenever USER_AGENT_BLOCKER_ANALYTICS
+# or USER_AGENT_BLOCKER_EF_POLICY is set at the site level. That generated function
+# does `import { getStore } from "@netlify/blobs"`, which cannot be bundled in this
+# deploy and fails the build. Overriding the flag via [build.environment] did not
+# help because the site-level value takes precedence.
+#
+# This site only needs its static files published, so the injected edge function is
+# removed after the extension writes it (onPreBuild) and before edge-function
+# bundling runs. This disables the User Agent Blocker edge function for the deploy
+# without resolving @netlify/blobs and without adding a package.json or any
+# first-party edge functions.
+[build]
+  command = "rm -rf .netlify/edge-functions/ua_blocker_ef.ts .netlify/edge-functions/.vendor"

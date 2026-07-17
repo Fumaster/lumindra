@@ -1,260 +1,210 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style rel="stylesheet" type="text/css">@charset "utf-8";
+
+:root { --bg: #16271A; --bg2: #1a2f1e; --card: #1e3323; --text: #f5f0e8; --muted: #c8bfa8; --line: rgba(201,162,75,.18); --gold: #C9A24B; --accent: #d4b06a; --shadow: 0 20px 50px rgba(0,0,0,.35); --radius: 18px; --max: 1140px; }
+
+* { box-sizing: border-box; margin: 0px; padding: 0px; }
+
+html { scroll-behavior: smooth; }
+
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; }
+
+a { color: inherit; text-decoration: none; }
+
+.wrap { max-width: var(--max); margin: 0px auto; padding: 0px 24px; }
+
+.nav { position: sticky; top: 0px; z-index: 20; backdrop-filter: blur(14px); background: rgba(22, 39, 26, 0.82); border-bottom: 1px solid var(--line); }
+
+.nav-inner { display: flex; align-items: center; justify-content: space-between; min-height: 72px; }
+
+.brand { font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif; font-size: 1.05rem; font-weight: 700; letter-spacing: 0.32em; text-transform: uppercase; color: var(--text); }
+
+.brand span { color: var(--gold); }
+
+.nav-links { display: flex; gap: 26px; align-items: center; }
+
+.nav-links a { font-size: 0.93rem; color: var(--muted); transition: color 0.2s; }
+
+.nav-links a:hover { color: var(--gold); }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; padding: 13px 22px; border-radius: 999px; font-weight: 700; font-size: 0.93rem; transition: 0.2s; border: 1px solid transparent; cursor: pointer; }
+
+.btn-primary { background: linear-gradient(135deg, var(--gold), var(--accent)); color: rgb(22, 39, 26); box-shadow: var(--shadow); }
+
+.btn-primary:hover { transform: translateY(-1px); filter: brightness(1.06); }
+
+.btn-secondary { border-color: rgba(201, 162, 75, 0.42); color: var(--text); background: rgba(201, 162, 75, 0.06); }
+
+.btn-secondary:hover { background: rgba(201, 162, 75, 0.12); }
+
+.hero { padding: 90px 0px 72px; }
+
+.hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: center; }
+
+.eyebrow { display: inline-block; padding: 7px 14px; border: 1px solid rgba(201, 162, 75, 0.35); border-radius: 999px; color: var(--gold); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; background: rgba(201, 162, 75, 0.07); margin-bottom: 20px; }
+
+h1 { margin: 0px 0px 20px; font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif; font-size: clamp(2.2rem, 5vw, 4rem); line-height: 1.06; letter-spacing: -0.02em; color: var(--text); }
+
+.lead { margin: 0px 0px 28px; font-size: 1.1rem; color: var(--muted); max-width: 740px; }
+
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 26px; }
+
+.hero-meta { color: var(--muted); font-size: 0.94rem; }
+
+.hero-card { background: linear-gradient(160deg, rgba(201, 162, 75, 0.08), rgba(201, 162, 75, 0.02)); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px; box-shadow: var(--shadow); }
+
+.hero-card h3 { font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif; margin: 0px 0px 16px; font-size: 1.12rem; color: var(--gold); }
+
+.hero-card ul { padding-left: 18px; color: var(--muted); }
+
+.hero-card li { margin: 9px 0px; }
+
+.founder-block { background: rgba(201, 162, 75, 0.06); border-top-color: ; border-top-style: ; border-top-width: ; border-right-color: ; border-right-style: ; border-right-width: ; border-bottom-color: ; border-bottom-style: ; border-bottom-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-left: 3px solid var(--gold); border-radius: 12px; padding: 24px 28px; margin: 32px 0px 0px; }
+
+.founder-block p { color: var(--muted); font-size: 1rem; line-height: 1.7; }
+
+.founder-block strong { color: var(--text); }
+
+.trust-strip { padding: 12px 0px 28px; }
+
+.trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+
+.trust-item { background: rgba(201, 162, 75, 0.05); border: 1px solid var(--line); border-radius: 14px; padding: 18px; }
+
+.trust-item strong { display: block; margin-bottom: 6px; font-size: 0.97rem; color: var(--text); }
+
+.trust-item span { color: var(--muted); font-size: 0.92rem; }
+
+section { padding: 72px 0px; border-top: 1px solid rgba(201, 162, 75, 0.1); }
+
+.section-head { max-width: 760px; margin-bottom: 34px; }
+
+.section-head h2 { font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif; margin: 0px 0px 12px; font-size: clamp(1.7rem, 3vw, 2.6rem); line-height: 1.12; letter-spacing: -0.02em; }
+
+.section-head p { color: var(--muted); font-size: 1rem; }
+
+.copy p { color: var(--muted); margin-bottom: 16px; font-size: 1rem; }
+
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+
+.card { background: linear-gradient(rgba(201, 162, 75, 0.05), rgba(201, 162, 75, 0.01)); border: 1px solid var(--line); border-radius: 18px; padding: 26px; box-shadow: var(--shadow); }
+
+.card h3 { font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif; margin: 0px 0px 10px; font-size: 1.1rem; color: var(--gold); }
+
+.card p { color: var(--muted); font-size: 0.96rem; }
+
+.list { margin: 12px 0px 0px; padding-left: 18px; color: var(--muted); font-size: 0.95rem; }
+
+.list li { margin: 7px 0px; }
+
+.proof { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+
+.proof-box { background: rgba(201, 162, 75, 0.04); border: 1px solid var(--line); border-radius: 18px; padding: 26px; }
+
+.proof-box h3 { font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif; margin: 0px 0px 14px; color: var(--gold); }
+
+.proof-box ul { padding-left: 18px; color: var(--muted); font-size: 0.96rem; }
+
+.proof-box li { margin: 9px 0px; }
+
+.proof-link { display: inline-block; margin-top: 16px; color: var(--gold); font-weight: 700; font-size: 0.93rem; border-bottom: 1px solid rgba(201, 162, 75, 0.35); padding-bottom: 2px; }
+
+.yt-wrap { background: rgba(201, 162, 75, 0.04); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; text-align: center; }
+
+.yt-wrap p { color: var(--muted); margin-top: 16px; font-size: 0.96rem; }
+
+.yt-embed { width: 100%; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; }
+
+.yt-embed iframe { width: 100%; height: 100%; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; }
+.yt-player { width: 100%; height: auto; display: block; border-radius: 12px; background: #000; }
+
+.yt-channel-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; color: var(--gold); font-weight: 700; font-size: 0.93rem; }
+
+.about { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 24px; align-items: start; }
+
+.panel { background: rgba(201, 162, 75, 0.04); border: 1px solid var(--line); border-radius: 18px; padding: 26px; }
+
+.panel h3 { font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif; margin: 0px 0px 14px; color: var(--gold); }
+
+.twocol { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+
+.cta { text-align: center; padding: 86px 0px; }
+
+.cta-box { max-width: 880px; margin: 0px auto; padding: 40px; border-radius: 24px; border: 1px solid rgba(201, 162, 75, 0.32); background: linear-gradient(rgba(201, 162, 75, 0.1), rgba(201, 162, 75, 0.02)); box-shadow: var(--shadow); }
+
+.cta h2 { font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif; margin: 0px 0px 14px; font-size: clamp(1.8rem, 3.5vw, 2.8rem); line-height: 1.12; }
+
+.cta p { color: var(--muted); margin: 0px auto 28px; max-width: 640px; }
+
+.cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+
+.faq-item { background: rgba(201, 162, 75, 0.04); border: 1px solid var(--line); border-radius: 18px; padding: 22px; }
+
+.faq-item h3 { font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif; margin: 0px 0px 8px; font-size: 1.05rem; color: var(--gold); }
+
+.faq-item p { color: var(--muted); font-size: 0.95rem; }
+
+footer { border-top: 1px solid var(--line); padding: 30px 0px 48px; color: var(--muted); }
+
+.footer-grid { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: flex-start; }
+
+.footer-brand { font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif; font-size: 1rem; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; color: var(--text); margin-bottom: 6px; }
+
+.footer-brand span { color: var(--gold); }
+
+.small { font-size: 0.9rem; }
+
+.footer-links { display: flex; gap: 18px; flex-wrap: wrap; }
+
+.footer-links a { font-size: 0.9rem; color: var(--muted); }
+
+.footer-links a:hover { color: var(--gold); }
+
+@media (max-width: 980px) {
+  .hero-grid, .about, .proof, .twocol, .faq-grid { grid-template-columns: 1fr; }
+  .cards, .trust-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 680px) {
+  .nav-links { display: none; }
+  .cards, .trust-grid { grid-template-columns: 1fr; }
+  .wrap { padding: 0px 18px; }
+  .hero { padding-top: 60px; }
+  .hero-actions { flex-direction: column; align-items: stretch; }
+}
+/* === Testimonials section (added) === */
+#testimonials{scroll-margin-top:90px}
+#testimonials .t-banner{display:block;width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--line);box-shadow:var(--shadow);margin:10px 0 30px}
+#testimonials .t-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:14px}
+#testimonials .t-card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:34px 32px 30px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+#testimonials .t-stars{color:var(--gold);letter-spacing:4px;font-size:15px;margin-bottom:14px}
+#testimonials .t-quote-mark{font-family:Georgia,serif;color:var(--gold);opacity:.55;font-size:56px;line-height:0;height:22px;display:block}
+#testimonials .t-body{font-family:"Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;color:var(--text);font-size:16.5px;line-height:1.72;margin:6px 0 0}
+#testimonials .t-body p{margin:0 0 14px}
+#testimonials .t-emph{color:var(--accent);font-weight:600}
+#testimonials .t-attr{margin-top:auto;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:14px;letter-spacing:.3px}
+#testimonials .t-attr strong{display:block;color:var(--gold);font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:3px}
+#testimonials .t-pillars{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:34px}
+#testimonials .t-pill{color:var(--muted);border:1px solid var(--line);border-radius:100px;padding:8px 20px;font-size:12.5px;letter-spacing:2px;text-transform:uppercase}
+#testimonials .t-pill b{color:var(--gold);font-weight:600}
+#testimonials .t-cta{text-align:center;margin-top:30px}
+@media(max-width:820px){#testimonials .t-grid{grid-template-columns:1fr}}
+
+</style>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lumindra | AI Consultant Bali | Mark Tulloch</title>
-  <meta name="description" content="Lumindra is a Bali-based AI consulting and business systems practice led by Mark Tulloch, former COO of Bali Realty. Practical AI, clarity, and implementation for real businesses." />
-  <meta name="keywords" content="Bali AI consultant, AI Bali, Mark Tulloch, Lumindra, Conscious Systems, hospitality AI, AI implementation Bali, business systems Bali, Bali business consultant" />
-  <meta name="author" content="Mark Tulloch" />
-  <meta property="og:title" content="Lumindra | AI Consultant Bali | Mark Tulloch" />
-  <meta property="og:description" content="Practical AI, clarity, and business systems for real businesses in Bali. Led by Mark Tulloch, former COO of Bali Realty." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://lumindra.co" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link rel="manifest" href="manifest.json" />
-  <style>
-    :root {
-      --bg: #16271A;
-      --bg2: #1a2f1e;
-      --card: #1e3323;
-      --text: #f5f0e8;
-      --muted: #c8bfa8;
-      --line: rgba(201,162,75,.18);
-      --gold: #C9A24B;
-      --accent: #d4b06a;
-      --shadow: 0 20px 50px rgba(0,0,0,.35);
-      --radius: 18px;
-      --max: 1140px;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.65;
-    }
-    a { color: inherit; text-decoration: none; }
-    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
-
-    /* NAV */
-    .nav {
-      position: sticky; top: 0; z-index: 20;
-      backdrop-filter: blur(14px);
-      background: rgba(22,39,26,.82);
-      border-bottom: 1px solid var(--line);
-    }
-    .nav-inner {
-      display: flex; align-items: center; justify-content: space-between;
-      min-height: 72px;
-    }
-    .brand {
-      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
-      font-size: 1.05rem; font-weight: 700; letter-spacing: .32em; text-transform: uppercase; color: var(--text);
-    }
-    .brand span { color: var(--gold); }
-    .nav-links { display: flex; gap: 26px; align-items: center; }
-    .nav-links a { font-size: .93rem; color: var(--muted); transition: color .2s; }
-    .nav-links a:hover { color: var(--gold); }
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center;
-      padding: 13px 22px; border-radius: 999px; font-weight: 700; font-size: .93rem;
-      transition: .2s ease; border: 1px solid transparent; cursor: pointer;
-    }
-    .btn-primary {
-      background: linear-gradient(135deg, var(--gold), var(--accent));
-      color: #16271A; box-shadow: var(--shadow);
-    }
-    .btn-primary:hover { transform: translateY(-1px); filter: brightness(1.06); }
-    .btn-secondary {
-      border-color: rgba(201,162,75,.42);
-      color: var(--text); background: rgba(201,162,75,.06);
-    }
-    .btn-secondary:hover { background: rgba(201,162,75,.12); }
-
-    /* HERO */
-    .hero { padding: 90px 0 72px; }
-    .hero-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 40px; align-items: center; }
-    .eyebrow {
-      display: inline-block; padding: 7px 14px;
-      border: 1px solid rgba(201,162,75,.35); border-radius: 999px;
-      color: var(--gold); font-size: .8rem; font-weight: 700;
-      letter-spacing: .09em; text-transform: uppercase;
-      background: rgba(201,162,75,.07); margin-bottom: 20px;
-    }
-    h1 {
-      margin: 0 0 20px;
-      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
-      font-size: clamp(2.2rem, 5vw, 4rem);
-      line-height: 1.06; letter-spacing: -.02em; color: var(--text);
-    }
-    .lead { margin: 0 0 28px; font-size: 1.1rem; color: var(--muted); max-width: 740px; }
-    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 26px; }
-    .hero-meta { color: var(--muted); font-size: .94rem; }
-    .hero-card {
-      background: linear-gradient(160deg, rgba(201,162,75,.08), rgba(201,162,75,.02));
-      border: 1px solid var(--line); border-radius: var(--radius);
-      padding: 30px; box-shadow: var(--shadow);
-    }
-    .hero-card h3 {
-      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
-      margin: 0 0 16px; font-size: 1.12rem; color: var(--gold);
-    }
-    .hero-card ul { padding-left: 18px; color: var(--muted); }
-    .hero-card li { margin: 9px 0; }
-
-    /* FOUNDER BLOCK — plain text for Google/AI indexing */
-    .founder-block {
-      background: rgba(201,162,75,.06);
-      border: 1px solid var(--line);
-      border-left: 3px solid var(--gold);
-      border-radius: 12px; padding: 24px 28px;
-      margin: 32px 0 0;
-    }
-    .founder-block p { color: var(--muted); font-size: 1rem; line-height: 1.7; }
-    .founder-block strong { color: var(--text); }
-
-    /* TRUST STRIP */
-    .trust-strip { padding: 12px 0 28px; }
-    .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
-    .trust-item {
-      background: rgba(201,162,75,.05);
-      border: 1px solid var(--line); border-radius: 14px; padding: 18px;
-    }
-    .trust-item strong { display: block; margin-bottom: 6px; font-size: .97rem; color: var(--text); }
-    .trust-item span { color: var(--muted); font-size: .92rem; }
-
-    /* SECTIONS */
-    section { padding: 72px 0; border-top: 1px solid rgba(201,162,75,.10); }
-    .section-head { max-width: 760px; margin-bottom: 34px; }
-    .section-head h2 {
-      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
-      margin: 0 0 12px;
-      font-size: clamp(1.7rem, 3vw, 2.6rem);
-      line-height: 1.12; letter-spacing: -.02em;
-    }
-    .section-head p { color: var(--muted); font-size: 1rem; }
-    .copy p { color: var(--muted); margin-bottom: 16px; font-size: 1rem; }
-
-    /* CARDS */
-    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    .card {
-      background: linear-gradient(180deg, rgba(201,162,75,.05), rgba(201,162,75,.01));
-      border: 1px solid var(--line);
-      border-radius: 18px; padding: 26px; box-shadow: var(--shadow);
-    }
-    .card h3 {
-      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
-      margin: 0 0 10px; font-size: 1.1rem; color: var(--gold);
-    }
-    .card p { color: var(--muted); font-size: .96rem; }
-    .list { margin: 12px 0 0; padding-left: 18px; color: var(--muted); font-size: .95rem; }
-    .list li { margin: 7px 0; }
-
-    /* PROOF */
-    .proof { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-    .proof-box {
-      background: rgba(201,162,75,.04); border: 1px solid var(--line);
-      border-radius: 18px; padding: 26px;
-    }
-    .proof-box h3 {
-      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
-      margin: 0 0 14px; color: var(--gold);
-    }
-    .proof-box ul { padding-left: 18px; color: var(--muted); font-size: .96rem; }
-    .proof-box li { margin: 9px 0; }
-    .proof-link {
-      display: inline-block; margin-top: 16px;
-      color: var(--gold); font-weight: 700; font-size: .93rem;
-      border-bottom: 1px solid rgba(201,162,75,.35); padding-bottom: 2px;
-    }
-
-    /* YOUTUBE */
-    .yt-wrap {
-      background: rgba(201,162,75,.04); border: 1px solid var(--line);
-      border-radius: var(--radius); padding: 28px; text-align: center;
-    }
-    .yt-wrap p { color: var(--muted); margin-top: 16px; font-size: .96rem; }
-    .yt-embed { width: 100%; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; }
-    .yt-embed iframe { width: 100%; height: 100%; border: none; }
-    .yt-channel-link {
-      display: inline-flex; align-items: center; gap: 8px;
-      margin-top: 16px; color: var(--gold); font-weight: 700; font-size: .93rem;
-    }
-
-    /* ABOUT */
-    .about { display: grid; grid-template-columns: 1.1fr .9fr; gap: 24px; align-items: start; }
-    .panel {
-      background: rgba(201,162,75,.04); border: 1px solid var(--line);
-      border-radius: 18px; padding: 26px;
-    }
-    .panel h3 {
-      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
-      margin: 0 0 14px; color: var(--gold);
-    }
-
-    /* TWOCOL */
-    .twocol { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-
-    /* CTA */
-    .cta { text-align: center; padding: 86px 0; }
-    .cta-box {
-      max-width: 880px; margin: 0 auto; padding: 40px;
-      border-radius: 24px; border: 1px solid rgba(201,162,75,.32);
-      background: linear-gradient(180deg, rgba(201,162,75,.10), rgba(201,162,75,.02));
-      box-shadow: var(--shadow);
-    }
-    .cta h2 {
-      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
-      margin: 0 0 14px;
-      font-size: clamp(1.8rem, 3.5vw, 2.8rem); line-height: 1.12;
-    }
-    .cta p { color: var(--muted); margin: 0 auto 28px; max-width: 640px; }
-    .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-
-    /* FAQ */
-    .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-    .faq-item {
-      background: rgba(201,162,75,.04); border: 1px solid var(--line);
-      border-radius: 18px; padding: 22px;
-    }
-    .faq-item h3 {
-      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
-      margin: 0 0 8px; font-size: 1.05rem; color: var(--gold);
-    }
-    .faq-item p { color: var(--muted); font-size: .95rem; }
-
-    /* FOOTER */
-    footer {
-      border-top: 1px solid var(--line);
-      padding: 30px 0 48px; color: var(--muted);
-    }
-    .footer-grid { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: flex-start; }
-    .footer-brand {
-      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
-      font-size: 1rem; font-weight: 700; letter-spacing: .28em; text-transform: uppercase; color: var(--text);
-      margin-bottom: 6px;
-    }
-    .footer-brand span { color: var(--gold); }
-    .small { font-size: .90rem; }
-    .footer-links { display: flex; gap: 18px; flex-wrap: wrap; }
-    .footer-links a { font-size: .90rem; color: var(--muted); }
-    .footer-links a:hover { color: var(--gold); }
-
-    /* RESPONSIVE */
-    @media (max-width: 980px) {
-      .hero-grid, .about, .proof, .twocol, .faq-grid { grid-template-columns: 1fr; }
-      .cards, .trust-grid { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 680px) {
-      .nav-links { display: none; }
-      .cards, .trust-grid { grid-template-columns: 1fr; }
-      .wrap { padding: 0 18px; }
-      .hero { padding-top: 60px; }
-      .hero-actions { flex-direction: column; align-items: stretch; }
-    }
-  </style>
+  <meta name="description" content="Lumindra is a Bali-based AI consulting and business systems practice led by Mark Tulloch, former COO of Bali Realty. Practical AI, clarity, and implementation for real businesses.">
+  <meta name="keywords" content="Bali AI consultant, AI Bali, Mark Tulloch, Lumindra, Conscious Systems, hospitality AI, AI implementation Bali, business systems Bali, Bali business consultant">
+  <meta name="author" content="Mark Tulloch">
+  <meta property="og:title" content="Lumindra | AI Consultant Bali | Mark Tulloch">
+  <meta property="og:description" content="Practical AI, clarity, and business systems for real businesses in Bali. Led by Mark Tulloch, former COO of Bali Realty.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lumindra.co">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="manifest" href="https://lumindra.co/manifest.json">
+  
 </head>
 <body>
 
@@ -262,11 +212,12 @@
     <div class="wrap nav-inner">
       <div class="brand">L U M I N <span>D R A</span></div>
       <div class="nav-links">
-        <a href="#proof">Proof</a>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="case-study-sunshooters.html">Case Study</a>
-        <a href="#faq">FAQ</a>
+        <a href="https://lumindra.co/#proof">Proof</a>
+        <a href="https://lumindra.co/#testimonials">Testimonials</a>
+        <a href="https://lumindra.co/#services">Services</a>
+        <a href="https://lumindra.co/#about">About</a>
+        <a href="https://lumindra.co/case-study-sunshooters">Case Study</a>
+        <a href="https://lumindra.co/#faq">FAQ</a>
         <a class="btn btn-secondary" href="https://wa.me/6282144029645?text=Hi%20Mark%2C%20I%27d%20like%20to%20book%20a%20clarity%20call%20with%20Lumindra." target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </div>
@@ -275,17 +226,17 @@
   <header class="hero">
     <div class="wrap hero-grid">
       <div>
-        <div class="eyebrow">AI Consultant Bali &middot; Real-World Systems</div>
+        <div class="eyebrow">AI Consultant Bali · Real-World Systems</div>
         <h1>AI Systems Built Inside Real Businesses — Not Just Talked About</h1>
         <p class="lead">
           Lumindra helps Bali businesses implement practical AI, automation, and operational systems that save time, reduce waste, and improve performance.
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="https://wa.me/6282144029645?text=Hi%20Mark%2C%20I%27d%20like%20to%20book%20a%20clarity%20call%20with%20Lumindra." target="_blank" rel="noopener">Book a Clarity Call</a>
-          <a class="btn btn-secondary" href="#proof">View Real-World Proof</a>
+          <a class="btn btn-secondary" href="https://lumindra.co/#proof">View Real-World Proof</a>
         </div>
         <div class="hero-meta">
-          Former COO, Bali Realty &middot; 35+ years operational experience &middot; Hospitality, property, systems, leadership
+          Former COO, Bali Realty · 35+ years operational experience · Hospitality, property, systems, leadership
         </div>
 
         <!-- GOOGLE/AI INDEXABLE FOUNDER BLOCK -->
@@ -314,11 +265,11 @@
     <div class="wrap trust-grid">
       <div class="trust-item">
         <strong>Led by Mark Tulloch</strong>
-        <span>Former COO, Bali Realty &middot; 35+ years operational experience</span>
+        <span>Former COO, Bali Realty · 35+ years operational experience</span>
       </div>
       <div class="trust-item">
         <strong>Based in Bali</strong>
-        <span>Kerobokan / Legian &middot; In-person or Zoom</span>
+        <span>Kerobokan / Legian · In-person or Zoom</span>
       </div>
       <div class="trust-item">
         <strong>Built in the real world</strong>
@@ -347,24 +298,73 @@
               <li>35+ years across hospitality, operations, leadership, and business growth</li>
               <li>International operating background: Australia, United Kingdom, and Bali</li>
               <li>MBA (Global), University of Newcastle</li>
-              <li>Published author &middot; Trained crisis counsellor &middot; Public speaker</li>
+              <li>Published author · Trained crisis counsellor · Public speaker</li>
               <li>Founding member, Bali AI Founders Club</li>
             </ul>
-            <a class="proof-link" href="about-mark-tulloch.html">Full profile &rarr;</a>
+            <a class="proof-link" href="https://lumindra.co/about-mark-tulloch">Full profile →</a>
           </div>
           <div class="proof-box">
             <h3>Live Case Environment</h3>
             <ul>
               <li><strong>Sunshooters Bar &amp; Grill</strong> (Legian, Bali) operates as a real-world proving ground for Lumindra's systems</li>
               <li>AI-driven content, WhatsApp automation, POS integration, and operational workflows tested live</li>
-              <li>Rated 4.9 stars on GoFood &middot; Top Service badge</li>
+              <li>Rated 4.9 stars on GoFood · Top Service badge</li>
               <li>Every system clients receive has been pressure-tested in a real business environment</li>
             </ul>
-            <a class="proof-link" href="case-study-sunshooters.html">Read the full case study &rarr;</a>
+            <a class="proof-link" href="https://lumindra.co/case-study-sunshooters">Read the full case study →</a>
           </div>
         </div>
       </div>
     </section>
+
+    <section id="testimonials">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>What Clients Say</h2>
+          <p>Real people. Real stories. Real transformation. Clarity is the first step &mdash; transformation is the result.</p>
+        </div>
+        <img class="t-banner" src="images/clarity-mapping.jpg" width="1672" height="941" loading="lazy" alt="Lumindra Conscious Systems &mdash; Clarity Mapping. Understand yourself. Change your direction." />
+        <div class="t-grid">
+
+          <div class="t-card">
+            <div class="t-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+            <span class="t-quote-mark">&ldquo;</span>
+            <div class="t-body">
+              <p>This Clarity Mapping session was a turning point for me. For the first time, I truly understood the patterns, pressures and beliefs that were shaping my life and decisions.</p>
+              <p>Mark created a safe, no-judgement space where I could be completely honest. The insights I received were incredibly accurate, eye-opening and deeply personal.</p>
+              <p>I now have clarity, direction and practical tools I use every day. I feel more in control, more aligned and more like me than I have in years.</p>
+              <p class="t-emph">If you&rsquo;re ready to understand yourself on a deeper level, this is 100% worth it.</p>
+            </div>
+            <div class="t-attr"><strong>Verified Clarity Mapping Client</strong>Bali</div>
+          </div>
+
+          <div class="t-card">
+            <div class="t-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+            <span class="t-quote-mark">&ldquo;</span>
+            <div class="t-body">
+              <p>I&rsquo;ve been using the clarity mapping system that Mark created since early May. When I first started using the system I was in a very bad headspace.</p>
+              <p>It&rsquo;s now early July and I have to say that things have improved significantly for me. My headspace is much clearer and life in general is improving.</p>
+              <p>I still have some moments where the darkness creeps back in, but by using the tools that Mark gave me I&rsquo;m now able to control the darkness and shed light on situations that would have previously sent me over the edge.</p>
+              <p class="t-emph">Thanks Mark.</p>
+            </div>
+            <div class="t-attr"><strong>Verified Clarity Mapping Client</strong>Bali</div>
+          </div>
+
+        </div>
+
+        <div class="t-pillars">
+          <span class="t-pill"><b>Clarity</b></span>
+          <span class="t-pill"><b>Understanding</b></span>
+          <span class="t-pill"><b>Direction</b></span>
+          <span class="t-pill"><b>Transformation</b></span>
+        </div>
+
+        <div class="t-cta">
+          <a class="btn btn-primary" href="https://wa.me/6282144029645?text=Hi%20Mark%2C%20I%27d%20like%20to%20book%20a%20Clarity%20Mapping%20session%20with%20Lumindra." target="_blank" rel="noopener">Book Your Clarity Mapping Session</a>
+        </div>
+      </div>
+    </section>
+
 
     <section>
       <div class="wrap">
@@ -436,17 +436,13 @@
           <p>Mark Tulloch shares real-world AI implementation, business systems, and founder clarity content on YouTube.</p>
         </div>
         <div class="yt-wrap">
-          <div class="yt-embed">
-            <iframe
-              src="https://www.youtube.com/embed?listType=user_uploads&list=BaliAiConsultant&rel=0"
-              title="Lumindra — Bali AI Consultant | Mark Tulloch"
-              allowfullscreen
-              loading="lazy"
-            ></iframe>
-          </div>
-          <p>Practical AI for real businesses &middot; Founder clarity &middot; Conscious Systems &middot; Live Bali case studies</p>
+          <video class="yt-player" controls playsinline preload="metadata" poster="images/clarity-mapping.jpg">
+            <source src="videos/lumindra-showreel.mp4" type="video/mp4" />
+            Your browser does not support embedded video. <a href="videos/lumindra-showreel.mp4">Download the video</a>.
+          </video>
+          <p>Practical AI for real businesses · Founder clarity · Conscious Systems · Live Bali case studies</p>
           <a class="yt-channel-link" href="https://youtube.com/@BaliAiConsultant" target="_blank" rel="noopener">
-            View the full channel &rarr;
+            View the full channel →
           </a>
         </div>
       </div>
@@ -480,7 +476,7 @@
         <div>
           <div class="section-head">
             <h2>About Mark Tulloch</h2>
-            <p>Founder of Lumindra &middot; Bali-based AI consultant and business systems practitioner</p>
+            <p>Founder of Lumindra · Bali-based AI consultant and business systems practitioner</p>
           </div>
           <div class="copy">
             <p>
@@ -497,7 +493,7 @@
             </p>
           </div>
           <div style="margin-top: 20px;">
-            <a class="btn btn-secondary" href="about-mark-tulloch.html">Full profile &rarr;</a>
+            <a class="btn btn-secondary" href="https://lumindra.co/about-mark-tulloch">Full profile →</a>
           </div>
         </div>
         <div class="panel">
@@ -598,27 +594,38 @@
       <div>
         <div class="footer-brand">L U M I N <span>D R A</span></div>
         <div class="small">Practical AI, clarity, and business systems for real businesses in Bali.</div>
-        <div class="small" style="margin-top:6px;">Mark Tulloch &middot; Founder &middot; Former COO, Bali Realty</div>
+        <div class="small" style="margin-top:6px;">Mark Tulloch · Founder · Former COO, Bali Realty</div>
       </div>
       <div>
         <div class="footer-links">
-          <a href="#services">Services</a>
-          <a href="#proof">Proof</a>
-          <a href="case-study-sunshooters.html">Case Study</a>
-          <a href="about-mark-tulloch.html">About</a>
+          <a href="https://lumindra.co/#services">Services</a>
+          <a href="https://lumindra.co/#proof">Proof</a>
+          <a href="https://lumindra.co/case-study-sunshooters">Case Study</a>
+          <a href="https://lumindra.co/about-mark-tulloch">About</a>
           <a href="https://youtube.com/@BaliAiConsultant" target="_blank" rel="noopener">YouTube</a>
         </div>
         <div class="small" style="margin-top:14px;">
-          Kerobokan / Legian, Bali &middot; WhatsApp: +62 821-4402-9645 &middot; <a href="mailto:Connect@baliaiconsultant.com" style="color:var(--gold)">Connect@baliaiconsultant.com</a>
+          Kerobokan / Legian, Bali · WhatsApp: +62 821-4402-9645 · <a href="mailto:Connect@baliaiconsultant.com" style="color:var(--gold)">Connect@baliaiconsultant.com</a>
         </div>
       </div>
     </div>
   </footer>
 
   <script>
+    // The site no longer uses a service worker. Proactively remove any worker
+    // (and its caches) left over from a previous version so visitors always get
+    // the latest deploy instead of a stale cached page.
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js');
+      navigator.serviceWorker.getRegistrations().then(function (regs) {
+        regs.forEach(function (reg) { reg.unregister(); });
+      });
+      if (window.caches && caches.keys) {
+        caches.keys().then(function (keys) {
+          keys.forEach(function (key) { caches.delete(key); });
+        });
+      }
     }
   </script>
-</body>
-</html>
+
+
+</body></html>
