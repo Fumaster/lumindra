@@ -1,0 +1,7 @@
+[build]
+  # The site itself is static — nothing is compiled here. This command only
+  # installs the npm dependencies that the Netlify extension edge functions
+  # import (the user-agent-blocker edge function imports "@netlify/blobs"),
+  # so they can be resolved when edge functions are bundled.
+  command = "npm install --no-audit --no-fund"
+  publish = "."
