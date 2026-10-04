@@ -1,0 +1,38 @@
+<!-- @dsCard height=288 -->
+<style>
+  html, body { margin: 0; }
+  .cv { position: relative; width: 960px; height: 288px; overflow: hidden; background: var(--surface); }
+  .cv svg { position: absolute; inset: 0; }
+  .gold { fill: var(--house-lumindra-gold); }
+  .blue { fill: var(--house-sunshooters-blue); }
+  .csteal { fill: var(--house-conscious-teal); }
+  .baiteal { fill: var(--house-bali-ai-teal); }
+  .csgold { fill: var(--house-conscious-gold); }
+  .tile { rx: var(--radius-lg); }
+  .ring { fill: none; stroke: var(--surface); stroke-width: 2; }
+  .cv-text { position: absolute; left: 48px; bottom: 36px; max-width: 440px; display: flex; flex-direction: column; gap: 12px; }
+  .cv-name { font-family: var(--font-display); font-weight: 700; font-size: 64px; line-height: .95; letter-spacing: -.02em; color: var(--ink); margin: 0; }
+  .cv-tag { font-family: var(--font-body); font-size: 14px; line-height: 1.4; color: var(--ink-muted); margin: 0; }
+</style>
+<div class="cv">
+  <!--
+    blocks: house-lumindra-gold slab 180×236, house-sunshooters-blue 240×126, house-conscious-teal 120×200, house-bali-ai-teal 120×92, house-conscious-gold disc r30
+    arrangement: one tall gold slab with three satellites on an 18px (space-gap) grid, bleeding off top, right and bottom
+    pattern: concentric half-rings rising from the slab's base, cut in surface: the Lumindra seal's rings and the Sunshooters rising sun, the motif the family shares
+    scales: gap space-gap 18px, ring pitch 30px (space-lg), corners radius-lg 18px, disc = half its side
+  -->
+  <svg width="960" height="288" viewBox="0 0 960 288" aria-hidden="true">
+    <rect class="gold tile" x="540" y="-20" width="180" height="236"/>
+    <rect class="blue tile" x="738" y="-20" width="240" height="126"/>
+    <rect class="csteal tile" x="738" y="124" width="120" height="200"/>
+    <rect class="baiteal tile" x="876" y="124" width="120" height="92"/>
+    <circle class="csgold" cx="906" cy="258" r="30"/>
+    <path class="ring" d="M600 216 A30 30 0 0 1 660 216"/>
+    <path class="ring" d="M570 216 A60 60 0 0 1 690 216"/>
+    <path class="ring" d="M540 216 A90 90 0 0 1 720 216"/>
+  </svg>
+  <div class="cv-text">
+    <p class="cv-name">Lumindra<br>Brand Family</p>
+    <p class="cv-tag">Lumindra, Sunshooters, Conscious Systems and Bali AI Consultant: one set of components, four themes.</p>
+  </div>
+</div>
