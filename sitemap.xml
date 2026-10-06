@@ -29,4 +29,10 @@
   <url><loc>https://lumindra.co/proof</loc></url>
   <url><loc>https://lumindra.co/story</loc></url>
   <url><loc>https://lumindra.co/contact</loc></url>
+  <url>
+    <loc>https://lumindra.co/hub/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>

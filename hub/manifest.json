@@ -1,0 +1,22 @@
+{
+  "name": "Lumindra | AI Systems and Clarity Sessions, Bali",
+  "short_name": "Lumindra",
+  "id": "/hub/",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#05080D",
+  "theme_color": "#05080D",
+  "description": "Practical AI and one-on-one clarity sessions for Bali business owners, led by Mark Tulloch in Kerobokan.",
+  "icons": [
+    { "src": "images/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "images/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "images/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Book a free AI call", "url": "./#ai" },
+    { "name": "Clarity sessions", "url": "./#human" },
+    { "name": "Message Mark", "url": "./#talk" }
+  ]
+}
