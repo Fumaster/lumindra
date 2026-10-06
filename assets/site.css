@@ -45,12 +45,13 @@ header.top.scrolled{background:rgba(5,8,13,.95);border-color:var(--line)}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
 .brand img{width:44px;height:44px;border-radius:50%;object-fit:cover;border:1px solid var(--line)}
 .brand span{font-family:Oswald,sans-serif;font-weight:600;font-size:26px;letter-spacing:.3em;color:var(--gold-hi)}
-nav.main{display:none;align-items:center;gap:6px}
-nav.main a{font-family:Oswald,sans-serif;font-weight:500;font-size:16px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--muted);padding:8px 12px;position:relative}
-nav.main a::after{content:"";position:absolute;left:12px;right:12px;bottom:2px;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+nav.main{display:none;align-items:center;gap:2px}
+nav.main a{font-family:Oswald,sans-serif;font-weight:500;font-size:14.5px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--muted);padding:8px 9px;position:relative;white-space:nowrap}
+nav.main a::after{content:"";position:absolute;left:9px;right:9px;bottom:2px;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .25s}
 nav.main a:hover,nav.main a[aria-current="page"]{color:var(--gold-hi)}
 nav.main a:hover::after,nav.main a[aria-current="page"]::after{transform:scaleX(1)}
-.menu-btn{display:inline-flex;flex-direction:column;justify-content:center;gap:6px;width:46px;height:46px;background:none;border:1px solid var(--line);border-radius:3px;padding:0 11px;cursor:pointer}
+.menu-btn{display:inline-flex;flex-direction:column;justify-content:center;gap:6px;width:46px;height:46px;background:none;border:1px solid var(--line);border-radius:3px;padding:0 11px;cursor:pointer;position:relative;margin-left:58px}
+.menu-btn::before{content:"Menu";position:absolute;right:56px;top:50%;transform:translateY(-50%);font-family:Oswald,sans-serif;font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
 .menu-btn span{display:block;height:2px;background:var(--gold);transition:transform .25s,opacity .2s}
 .menu-btn[aria-expanded="true"] span:nth-child(1){transform:translateY(8px) rotate(45deg)}
 .menu-btn[aria-expanded="true"] span:nth-child(2){opacity:0}
@@ -58,10 +59,10 @@ nav.main a:hover::after,nav.main a[aria-current="page"]::after{transform:scaleX(
 .top-cta{display:none}
 .drawer{position:fixed;inset:var(--hdr) 0 0 0;background:rgba(5,8,13,.98);z-index:49;padding:28px 22px 40px;display:flex;flex-direction:column;gap:4px;transform:translateY(-8px);opacity:0;visibility:hidden;transition:opacity .22s,transform .22s,visibility .22s;overflow:auto}
 .drawer.open{opacity:1;visibility:visible;transform:none}
-.drawer a{font-family:Oswald,sans-serif;font-weight:600;font-size:34px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:12px 0;border-bottom:1px solid var(--line-soft);color:var(--text)}
+.drawer a{font-family:Oswald,sans-serif;font-weight:600;font-size:28px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:12px 0;border-bottom:1px solid var(--line-soft);color:var(--text)}
 .drawer a[aria-current="page"]{color:var(--gold)}
 .drawer .btn{margin-top:22px;font-size:20px;border-bottom:1px solid #E3BC7B}
-@media(min-width:1060px){nav.main{display:flex}.menu-btn,.drawer{display:none}.top-cta{display:inline-flex}}
+@media(min-width:1180px){nav.main{display:flex}.menu-btn,.drawer{display:none}.top-cta{display:inline-flex}}
 
 /* hero */
 .hero{position:relative;padding:68px 0 0;overflow:hidden;background:
