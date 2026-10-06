@@ -1,322 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="no-js">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mark Tulloch | Founder, Lumindra | AI Consultant Bali | Former COO Bali Realty</title>
-  <meta name="description" content="Mark Tulloch is the founder of Lumindra, a Bali-based AI consulting and business systems practice. Former COO of Bali Realty, 35+ years international experience across hospitality, operations, and leadership.">
-  <meta name="keywords" content="Mark Tulloch, Lumindra founder, Bali AI consultant, former COO Bali Realty, hospitality consultant Bali, Mark Tulloch Bali, AI consultant Indonesia">
-  <meta name="author" content="Mark Tulloch">
-  <meta property="og:title" content="Mark Tulloch | Founder of Lumindra | Former COO Bali Realty | AI Consultant Bali">
-  <meta property="og:description" content="35+ years international experience. Former COO of Bali Realty. Founder of Lumindra and Conscious Systems. Based in Kerobokan, Bali.">
-  <meta property="og:type" content="profile">
-  <meta property="og:url" content="https://lumindra.co/about-mark-tulloch.html">
-  <style>
-    :root { --bg: #16271A; --text: #f5f0e8; --muted: #c8bfa8; --line: rgba(201,162,75,.18); --gold: #C9A24B; --accent: #d4b06a; --shadow: 0 20px 50px rgba(0,0,0,.35); --radius: 18px; --max: 960px; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.72; }
-    a { color: inherit; text-decoration: none; }
-    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
-    .nav { position: sticky; top: 0; z-index: 20; backdrop-filter: blur(14px); background: rgba(22, 39, 26, 0.82); border-bottom: 1px solid var(--line); }
-    .nav-inner { display: flex; align-items: center; justify-content: space-between; min-height: 70px; }
-    .brand { font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif; font-size: 1rem; font-weight: 700; letter-spacing: .32em; text-transform: uppercase; }
-    .brand span { color: var(--gold); }
-    .back-link { color: var(--gold); font-size: .93rem; font-weight: 600; }
-    .back-link:hover { text-decoration: underline; }
-    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 13px 22px; border-radius: 999px; font-weight: 700; font-size: .92rem; transition: .2s; border: 1px solid transparent; cursor: pointer; }
-    .btn-primary { background: linear-gradient(135deg, var(--gold), var(--accent)); color: #16271A; box-shadow: var(--shadow); }
-    .btn-primary:hover { transform: translateY(-1px); filter: brightness(1.06); }
-    .btn-secondary { border-color: rgba(201,162,75,.42); color: var(--text); background: rgba(201,162,75,.06); }
-    .btn-secondary:hover { background: rgba(201,162,75,.12); }
-    .hero { padding: 80px 0 60px; border-bottom: 1px solid var(--line); }
-    .eyebrow { display: inline-block; padding: 7px 14px; margin-bottom: 18px; border: 1px solid rgba(201,162,75,.35); border-radius: 999px; color: var(--gold); font-size: .8rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; background: rgba(201,162,75,.07); }
-    h1 { font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif; font-size: clamp(2.2rem, 4.5vw, 3.6rem); line-height: 1.08; letter-spacing: -.02em; margin-bottom: 12px; }
-    .headline-sub { color: var(--gold); font-size: 1.05rem; font-weight: 600; margin-bottom: 22px; }
-    .intro { color: var(--muted); font-size: 1.06rem; max-width: 800px; }
-    .creds { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 36px 0 0; }
-    .cred-item { background: rgba(201,162,75,.07); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; }
-    .cred-item .icon { font-size: 1.2rem; margin-bottom: 6px; }
-    .cred-item strong { display: block; font-size: .97rem; color: var(--text); margin-bottom: 4px; }
-    .cred-item span { color: var(--muted); font-size: .88rem; }
-    section { padding: 56px 0; border-top: 1px solid rgba(201,162,75,.1); }
-    h2 { font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif; font-size: clamp(1.5rem, 2.8vw, 2.1rem); line-height: 1.15; letter-spacing: -.02em; color: var(--gold); margin-bottom: 20px; }
-    h3 { font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif; font-size: 1.15rem; color: var(--text); margin-bottom: 10px; }
-    p { color: var(--muted); margin-bottom: 16px; font-size: 1rem; }
-    p:last-child { margin-bottom: 0; }
-    p strong { color: var(--text); }
-    .timeline { display: flex; flex-direction: column; gap: 0; }
-    .timeline-item { display: grid; grid-template-columns: 120px 1fr; gap: 20px; padding: 22px 0; border-bottom: 1px solid rgba(201,162,75,.1); }
-    .timeline-item:last-child { border-bottom: none; }
-    .timeline-year { color: var(--gold); font-weight: 700; font-size: .93rem; padding-top: 2px; letter-spacing: .04em; }
-    .timeline-content h3 { margin-bottom: 6px; }
-    .timeline-content p { margin-bottom: 0; font-size: .95rem; }
-    .twocol { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-    .box { background: rgba(201,162,75,.05); border: 1px solid var(--line); border-radius: 16px; padding: 24px; }
-    .box ul { padding-left: 18px; color: var(--muted); font-size: .95rem; }
-    .box li { margin: 8px 0; }
-    .quote-block { background: linear-gradient(135deg, rgba(201,162,75,.12), rgba(201,162,75,.04)); border: 1px solid rgba(201,162,75,.35); border-radius: var(--radius); padding: 30px 34px; margin: 30px 0; }
-    .quote-block p { color: var(--text); font-size: 1.08rem; font-style: italic; }
-    .social-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-    .social-item { background: rgba(201,162,75,.05); border: 1px solid var(--line); border-radius: 14px; padding: 20px; text-align: center; }
-    .social-item .platform { color: var(--gold); font-weight: 700; font-size: .9rem; margin-bottom: 6px; }
-    .social-item a { color: var(--muted); font-size: .88rem; word-break: break-all; }
-    .social-item a:hover { color: var(--gold); text-decoration: underline; }
-    .cta-strip { text-align: center; padding: 60px 0 80px; border-top: 1px solid rgba(201,162,75,.1); }
-    .cta-strip h2 { color: var(--text); }
-    .cta-strip p { color: var(--muted); max-width: 560px; margin: 0 auto 28px; }
-    .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-    footer { border-top: 1px solid var(--line); padding: 28px 0 44px; }
-    .footer-grid { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: center; }
-    .footer-brand { font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif; font-size: .97rem; letter-spacing: .28em; text-transform: uppercase; }
-    .footer-brand span { color: var(--gold); }
-    .small { color: var(--muted); font-size: .9rem; }
-    @media (max-width: 700px) {
-      .creds, .twocol, .social-grid { grid-template-columns: 1fr; }
-      .timeline-item { grid-template-columns: 1fr; gap: 4px; }
-      .wrap { padding: 0 18px; }
-      .hero { padding-top: 56px; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mark Tulloch | Founder of Lumindra | Bali</title>
+<meta name="description" content="Mark Tulloch is an Australian entrepreneur based in Kerobokan, Bali, with 35+ years across hospitality, operations and business systems. Founder of Lumindra and Conscious Systems.">
+<meta name="theme-color" content="#05080D">
+<link rel="canonical" href="https://lumindra.co/about-mark-tulloch">
+<link rel="manifest" href="/manifest.json">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lumindra">
+<meta property="og:title" content="Mark Tulloch | Founder of Lumindra | Bali">
+<meta property="og:description" content="Mark Tulloch is an Australian entrepreneur based in Kerobokan, Bali, with 35+ years across hospitality, operations and business systems. Founder of Lumindra and Conscious Systems.">
+<meta property="og:url" content="https://lumindra.co/about-mark-tulloch">
+<meta property="og:image" content="https://lumindra.co/assets/img/mark-bw.jpg">
+<link rel="icon" href="/assets/img/medallion.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<script>if('serviceWorker' in navigator){navigator.serviceWorker.getRegistrations().then(function(r){r.forEach(function(g){g.unregister()})});if(window.caches&&caches.keys){caches.keys().then(function(k){k.forEach(function(x){caches.delete(x)})})}}</script>
 </head>
 <body>
-
-  <nav class="nav">
-    <div class="wrap nav-inner">
-      <a class="brand" href="/">L U M I N <span>D R A</span></a>
-      <a class="back-link" href="/">← Back to Lumindra</a>
-    </div>
-  </nav>
-
-  <header class="hero">
-    <div class="wrap">
-      <div class="eyebrow">Founder · Lumindra</div>
-      <h1>Mark Tulloch</h1>
-      <div class="headline-sub">Former COO, Bali Realty · AI Consultant · Business Systems Practitioner · Bali</div>
-      <p class="intro">
-        Mark Tulloch is an Australian entrepreneur based in Kerobokan, Bali, with more than 35 years of international experience across hospitality management, operations leadership, business development, and organisational systems. He is the founder of Lumindra and Conscious Systems.
-      </p>
-      <div class="creds">
-        <div class="cred-item">
-          <div class="icon">🏢</div>
-          <strong>Former COO, Bali Realty</strong>
-          <span>Bali's leading property agency</span>
-        </div>
-        <div class="cred-item">
-          <div class="icon">🎓</div>
-          <strong>Associate Diploma of Hospitality Management</strong>
-          <span>Advanced Certificate in Commercial Catering</span>
-        </div>
-        <div class="cred-item">
-          <div class="icon">🌏</div>
-          <strong>35+ Years Experience</strong>
-          <span>Australia, United Kingdom, Bali</span>
-        </div>
-        <div class="cred-item">
-          <div class="icon">🤖</div>
-          <strong>Founder, Lumindra</strong>
-          <span>AI consulting &amp; business systems, Bali</span>
-        </div>
-        <div class="cred-item">
-          <div class="icon">🧠</div>
-          <strong>Founder, Conscious Systems</strong>
-          <span>Clarity coaching &amp; founder alignment</span>
-        </div>
-        <div class="cred-item">
-          <div class="icon">📚</div>
-          <strong>Published Author</strong>
-          <span>3 titles · Commercially licensed music creator</span>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main>
-
-    <!-- PLAIN TEXT INDEXABLE BLOCK — critical for Google/AI entity resolution -->
-    <section>
-      <div class="wrap">
-        <h2>About Mark Tulloch</h2>
-
-        <p>
-          <strong>Mark Tulloch is the founder of Lumindra, a Bali-based AI consulting and business systems practice headquartered in Kerobokan, Bali, Indonesia.</strong> He is a former Chief Operating Officer of Bali Realty — one of Bali's most established real estate agencies — and has more than 35 years of practical experience across hospitality operations, business leadership, and operational systems design.
-        </p>
-        <p>
-          Before founding Lumindra, Mark built his career across hospitality venues and business operations in Australia, the United Kingdom, and Bali. He has managed large operational teams, led business turnarounds, and worked in high-pressure environments where clarity, structure, and decision-making under pressure were the daily reality.
-        </p>
-        <p>
-          Mark holds an Associate Diploma of Hospitality Management and an Advanced Certificate in Commercial Catering. He is a licensed Armed Personal Protection Agent and holds a Certificate in Positive Psychiatry. He is a published author with three titles, a trained crisis counsellor, a mental health advocate, a public speaker, and a commercially licensed music creator with two albums licensed through APRA AMCOS.
-        </p>
-        <p>
-          He is a founding member of the Bali AI Founders Club and runs a YouTube channel at <a href="https://youtube.com/@LumindraBali" target="_blank" rel="noopener" style="color:var(--gold)">@LumindraBali</a> focused on practical AI for real businesses.
-        </p>
-        <p>
-          Mark currently operates <strong>Sunshooters Bar &amp; Grill</strong> in Legian, Bali — a live operational laboratory where Lumindra's AI systems, automation tools, and business frameworks are tested before being recommended to clients.
-        </p>
-
-        <div class="quote-block">
-          <p>"I didn't build Lumindra to add to the noise. I built it because I've spent 35 years inside real businesses, and I know what the gap between good advice and actual implementation looks like. Lumindra closes that gap."</p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap">
-        <h2>Career Background</h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-year">Now</div>
-            <div class="timeline-content">
-              <h3>Founder — Lumindra &amp; Conscious Systems</h3>
-              <p>Building and deploying AI consulting, business systems, and founder clarity work across Bali and globally via Zoom. Operating Sunshooters Bar &amp; Grill as a live implementation environment.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-year">~10 years</div>
-            <div class="timeline-content">
-              <h3>Chief Operating Officer — Bali Realty</h3>
-              <p>Led operations for Bali's leading property agency. Responsible for team leadership, operational systems, client management, and business performance across one of the most dynamic property markets in Southeast Asia.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-year">UK &amp; AUS</div>
-            <div class="timeline-content">
-              <h3>Senior Hospitality Operations — United Kingdom &amp; Australia</h3>
-              <p>35+ years managing high-volume hospitality venues, operational teams, and business performance across Australia and the United Kingdom. Including venue turnaround work, large team management, and P&amp;L responsibility.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-year">Qualifications</div>
-            <div class="timeline-content">
-              <h3>Associate Diploma of Hospitality Management · Advanced Certificate in Commercial Catering</h3>
-              <p>Formal hospitality management and commercial catering qualifications, applied across 35+ years of venue operations and now to consulting and business systems practice. Also a licensed Armed Personal Protection Agent and holder of a Certificate in Positive Psychiatry.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap">
-        <h2>What Mark Tulloch Builds</h2>
-        <div class="twocol">
-          <div class="box">
-            <h3>Lumindra — AI Consulting &amp; Business Systems</h3>
-            <ul>
-              <li>AI audits and implementation for Bali businesses</li>
-              <li>WhatsApp automation and AI agent setup</li>
-              <li>Operational systems design</li>
-              <li>Delivery platform optimisation</li>
-              <li>Owner Command Dashboard builds</li>
-              <li>AI workshops and staff onboarding</li>
-            </ul>
-          </div>
-          <div class="box">
-            <h3>Conscious Systems — Founder Clarity Work</h3>
-            <ul>
-              <li>Clarity Mapping sessions</li>
-              <li>5-Step Realignment program</li>
-              <li>Founder advisory and decision support</li>
-              <li>Couples realignment</li>
-              <li>Monthly Alignment Support</li>
-              <li>Personal operating framework development</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap">
-        <h2>Other Work</h2>
-        <div class="twocol">
-          <div class="box">
-            <h3>Published Author</h3>
-            <p style="font-size:.95rem;">
-              Mark is the author of three published titles including <em>The Pub, The Punch, and The Path</em> — a memoir of survival, resilience, and reinvention. Also the author of <em>Bipolar Aware</em>, reflecting his commitment to mental health advocacy and crisis support work.
-            </p>
-          </div>
-          <div class="box">
-            <h3>Music &amp; Media</h3>
-            <p style="font-size:.95rem;">
-              Two albums commercially licensed through APRA AMCOS. YouTube channel at <a href="https://youtube.com/@LumindraBali" target="_blank" rel="noopener" style="color:var(--gold)">@LumindraBali</a> covering practical AI, business clarity, and real Bali business case studies. Active on LinkedIn, TikTok, and Instagram under the Lumindra brand.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap">
-        <h2>Find Mark Tulloch Online</h2>
-        <div class="social-grid">
-          <div class="social-item">
-            <div class="platform">YouTube</div>
-            <a href="https://youtube.com/@LumindraBali" target="_blank" rel="noopener">@LumindraBali</a>
-          </div>
-          <div class="social-item">
-            <div class="platform">Website</div>
-            <a href="/" >lumindra.co</a>
-          </div>
-          <div class="social-item">
-            <div class="platform">WhatsApp</div>
-            <a href="https://wa.me/6282144029645" target="_blank" rel="noopener">+62 821-4402-9645</a>
-          </div>
-          <div class="social-item">
-            <div class="platform">Email</div>
-            <a href="mailto:Connect@baliaiconsultant.com">Connect@baliaiconsultant.com</a>
-          </div>
-          <div class="social-item">
-            <div class="platform">TikTok</div>
-            <a href="https://www.tiktok.com/@silenceisthekeycontact" target="_blank" rel="noopener">Lumindra.co</a>
-          </div>
-          <div class="social-item">
-            <div class="platform">Instagram</div>
-            <a href="https://instagram.com/lumindra.co" target="_blank" rel="noopener">@lumindra.co</a>
-          </div>
-          <div class="social-item">
-            <div class="platform">Facebook</div>
-            <a href="https://facebook.com/lumindra.co" target="_blank" rel="noopener">facebook.com/lumindra.co</a>
-          </div>
-          <div class="social-item">
-            <div class="platform">LinkedIn</div>
-            <a href="https://linkedin.com/in/marktullochbali" target="_blank" rel="noopener">linkedin.com/in/marktullochbali</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <div class="cta-strip">
-    <div class="wrap">
-      <h2>Work with Mark directly</h2>
-      <p>No agency. No gatekeepers. You talk to the person who will actually do the work.</p>
-      <div class="cta-btns">
-        <a class="btn btn-primary" href="https://wa.me/6282144029645?text=Hi%20Mark%2C%20I%27d%20like%20to%20book%20a%20clarity%20call%20with%20Lumindra." target="_blank" rel="noopener">Book a Clarity Call</a>
-        <a class="btn btn-secondary" href="/">Back to Lumindra</a>
-      </div>
-    </div>
-  </div>
-
-  <footer>
-    <div class="wrap footer-grid">
-      <div>
-        <div class="footer-brand">L U M I N <span>D R A</span></div>
-        <div class="small">Founded by Mark Tulloch · Kerobokan, Bali, Indonesia</div>
-        <div class="small" style="margin-top:8px;">
-          <a href="https://youtube.com/@lumindrabali" target="_blank" rel="noopener">YouTube</a> ·
-          <a href="https://www.tiktok.com/@silenceisthekeycontact" target="_blank" rel="noopener">TikTok</a> ·
-          <a href="https://instagram.com/lumindra.co" target="_blank" rel="noopener">Instagram</a> ·
-          <a href="https://facebook.com/lumindra.co" target="_blank" rel="noopener">Facebook</a> ·
-          <a href="https://linkedin.com/in/marktullochbali" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
-      </div>
-      <div class="small">
-        WhatsApp: +62 821-4402-9645 · <a href="mailto:Connect@baliaiconsultant.com" style="color:var(--gold)">Connect@baliaiconsultant.com</a>
-      </div>
-    </div>
-  </footer>
-
-</body>
-</html>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap">
+<a class="brand" href="/" aria-label="Lumindra home"><img src="/assets/img/medallion.jpg" alt="" width="44" height="44"><span>LUMINDRA</span></a>
+<nav class="main" aria-label="Main"><a href="/">Home</a><a href="/human">Human</a><a href="/technology">Technology</a><a href="/proof">Proof</a><a href="/story">Story</a><a href="/contact">Contact</a></nav>
+<a class="btn btn-sm top-cta " href="https://wa.me/6282144029645?text=Hi%20Mark%2C%20I%20found%20Lumindra%20online%20and%20would%20like%20to%20talk." target="_blank" rel="noopener">WhatsApp Mark</a>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Menu"><span></span><span></span><span></span></button>
+</div></header>
+<div class="drawer" id="drawer"><nav aria-label="Mobile"><a href="/">Home</a><a href="/human">Human</a><a href="/technology">Technology</a><a href="/proof">Proof</a><a href="/story">Story</a><a href="/contact">Contact</a></nav><a class="btn btn-primary " href="https://wa.me/6282144029645?text=Hi%20Mark%2C%20I%20found%20Lumindra%20online%20and%20would%20like%20to%20talk." target="_blank" rel="noopener">WhatsApp Mark</a></div>
+<main id="main">
+<section class="pagehero"><div class="wrap"><div class="crumbs"><a href="/">Home</a> &nbsp;/&nbsp; About</div>
+<div class="split"><div class="reveal"><div class="eyebrow">Founder &middot; Lumindra</div><h1>Mark <span class="serif metal">Tulloch</span></h1>
+<p class="lede" style="margin-bottom:28px">Former COO, Bali Realty &middot; AI Consultant &middot; Business Systems Practitioner &middot; Bali. Australian entrepreneur based in Kerobokan, Bali, with more than 35 years of international experience across hospitality management, operations leadership, business development and organisational systems.</p>
+<div class="cta-row"><a class="btn btn-primary " href="https://wa.me/6282144029645?text=Hi%20Mark%2C%20I%20read%20your%20profile%20and%20would%20like%20to%20talk." target="_blank" rel="noopener">WhatsApp Mark</a></div></div>
+<figure class="reveal" style="--d:.12s"><img src="/assets/img/mark-bw.jpg" alt="Mark Tulloch" width="760"><figcaption>Mark Tulloch &middot; Kerobokan, Bali</figcaption></figure></div></div></section>
+<section><div class="wrap"><div class="stats" style="margin-top:0;border-top:0">
+<div class="stat"><b>COO</b><span>Former, Bali Realty. Bali's leading property agency</span></div>
+<div class="stat"><b data-count="35" data-suffix="+">35+</b><span>Years in Australia, United Kingdom and Bali</span></div>
+<div class="stat"><b>2</b><span>Founder of Lumindra and Conscious Systems</span></div>
+<div class="stat"><b data-count="3">3</b><span>Published titles, plus commercially licensed music</span></div></div>
+<div class="split2" style="margin-top:60px"><div class="reveal"><div class="eyebrow">About</div><h2>Real businesses. <span class="serif metal">Real pressure.</span></h2>
+<p class="lede" style="margin-bottom:16px">Mark is the founder of Lumindra, a Bali-based AI consulting and business systems practice headquartered in Kerobokan, Indonesia. He is a former Chief Operating Officer of Bali Realty and has more than 35 years of practical experience across hospitality operations, business leadership and operational systems design.</p>
+<p style="color:var(--muted);margin-bottom:16px">Before founding Lumindra, Mark built his career across hospitality venues and business operations in Australia, the United Kingdom and Bali. He has managed large operational teams, led business turnarounds and worked in high-pressure environments where clarity, structure and decision-making under pressure were the daily reality.</p>
+<p style="color:var(--muted);margin-bottom:16px">He holds an Associate Diploma of Hospitality Management and an Advanced Certificate in Commercial Catering. He is a licensed Armed Personal Protection Agent and holds a Certificate in Positive Psychiatry. He is a published author with three titles, a trained crisis counsellor, a mental health advocate, a public speaker and a commercially licensed music creator, with two albums licensed through APRA AMCOS.</p>
+<p style="color:var(--muted)">He is a founding member of the Bali AI Founders Club and runs a YouTube channel at @lumindrabali focused on practical AI for real businesses. He currently operates Sunshooters Bar &amp; Grill in Kerobokan, Bali, a live operational laboratory where Lumindra's systems are tested before being recommended to clients.</p></div>
+<div class="reveal" style="--d:.12s"><div class="pull">I didn't build Lumindra to add to the noise. I built it because I've spent 35 years inside real businesses, and I know what the gap between good advice and actual implementation looks like. Lumindra closes that gap.<small>Mark Tulloch, Founder</small></div></div></div>
+<div class="reveal" style="margin-top:70px"><div class="eyebrow">Career background</div><h2>The <span class="serif metal">path</span></h2></div>
+<div class="timeline">
+<div class="tl reveal"><div class="y">Now</div><div><h3>Founder: Lumindra &amp; Conscious Systems</h3><p>Building and deploying AI consulting, business systems and founder clarity work across Bali and globally via Zoom. Operating Sunshooters Bar &amp; Grill as a live implementation environment.</p></div></div>
+<div class="tl reveal"><div class="y">~10 years</div><div><h3>Chief Operating Officer: Bali Realty</h3><p>Led operations for Bali's leading property agency. Responsible for team leadership, operational systems, client management and business performance across one of the most dynamic property markets in Southeast Asia.</p></div></div>
+<div class="tl reveal"><div class="y">UK &amp; AUS</div><div><h3>Senior Hospitality Operations</h3><p>35+ years managing high-volume hospitality venues, operational teams and business performance across Australia and the United Kingdom, including venue turnaround work, large team management and P&amp;L responsibility.</p></div></div>
+<div class="tl reveal"><div class="y">Qualifications</div><div><h3>Associate Diploma of Hospitality Management &middot; Advanced Certificate in Commercial Catering</h3><p>Formal hospitality management and commercial catering qualifications, applied across 35+ years of venue operations and now to consulting and business systems. Also a licensed Armed Personal Protection Agent and holder of a Certificate in Positive Psychiatry.</p></div></div>
+</div>
+<div class="grid2">
+<div class="panel reveal"><h3>Lumindra: AI consulting &amp; business systems</h3><ul><li>AI audits and implementation for Bali businesses</li><li>WhatsApp automation and AI agent setup</li><li>Operational systems design</li><li>Delivery platform optimisation</li><li>Owner Command Dashboard builds</li><li>AI workshops and staff onboarding</li></ul><a class="btn btn-ghost btn-sm" href="/technology">See Technology</a></div>
+<div class="panel reveal" style="--d:.1s"><h3>Conscious Systems: founder clarity work</h3><ul><li>Clarity Mapping sessions</li><li>5-Step Realignment program</li><li>Founder advisory and decision support</li><li>Couples realignment</li><li>Monthly Alignment Support</li><li>Personal operating framework development</li></ul><a class="btn btn-ghost btn-sm" href="/human">See Human</a></div>
+</div>
+<div class="grid2">
+<div class="panel reveal"><h3>Published author</h3><p style="color:var(--muted)">Author of three published titles including The Pub, The Punch and The Path, a memoir of survival, resilience and reinvention, and Bipolar Aware, reflecting his commitment to mental health advocacy and crisis support work.</p></div>
+<div class="panel reveal" style="--d:.1s"><h3>Music &amp; media</h3><p style="color:var(--muted)">Two albums commercially licensed through APRA AMCOS. YouTube channel at @lumindrabali covering practical AI, business clarity and real Bali business case studies. Active on LinkedIn, TikTok and Instagram under the Lumindra brand.</p></div>
+</div>
+<div class="socials-grid">
+<a href="https://youtube.com/@lumindrabali" target="_blank" rel="noopener"><b>YouTube</b><span>@lumindrabali</span></a><a href="https://www.tiktok.com/@lumindrabali" target="_blank" rel="noopener"><b>TikTok</b><span>@lumindrabali</span></a><a href="https://linkedin.com/in/marktullochbali" target="_blank" rel="noopener"><b>LinkedIn</b><span>Mark Tulloch</span></a><a href="https://instagram.com/lumindra.co" target="_blank" rel="noopener"><b>Instagram</b><span>@lumindra.co</span></a></div>
+</div></section><section class="final"><div class="wrap reveal">
+<div class="eyebrow">Start with a conversation</div>
+<h2>Work with someone who has <span class="serif">been there.</span></h2>
+<p class="lede" style="margin-bottom:30px">Message Mark directly. He responds personally.</p>
+<div class="cta-row"><a class="btn btn-primary " href="https://wa.me/6282144029645?text=Hi%20Mark%2C%20I%20read%20your%20profile%20and%20would%20like%20to%20talk." target="_blank" rel="noopener">Message Mark on WhatsApp</a> <a class="btn btn-ghost" href="/contact">All ways to reach Mark</a></div>
+</div></section></main>
+<footer><div class="wrap">
+<div class="foot">
+<div><img src="/assets/img/medallion.jpg" alt="Lumindra medallion" width="72" height="70" style="border-radius:50%;margin-bottom:14px;border:1px solid var(--line)"><p><strong style="color:var(--gold-hi)">Lumindra</strong><br>Architecting Clarity. AI consulting and business systems, Kerobokan, Bali.</p></div>
+<div><h4>Explore</h4><a href="/human">Human</a><a href="/technology">Technology</a><a href="/proof">Proof</a><a href="/story">Story</a><a href="/about-mark-tulloch">About Mark</a></div>
+<div><h4>Contact</h4><a href="https://wa.me/6282144029645?text=Hi%20Mark%2C%20I%20found%20Lumindra%20online%20and%20would%20like%20to%20talk." target="_blank" rel="noopener">WhatsApp +62 821 4402 9645</a><a href="mailto:Connect@baliaiconsultant.com">Connect@baliaiconsultant.com</a><a href="https://portal.lumindra.co" target="_blank" rel="noopener">Portal</a><a href="/app/">Conscious Systems app</a></div>
+<div><h4>Follow</h4><a href="https://youtube.com/@lumindrabali" target="_blank" rel="noopener">YouTube @lumindrabali</a><a href="https://www.tiktok.com/@lumindrabali" target="_blank" rel="noopener">TikTok @lumindrabali</a><a href="https://instagram.com/lumindra.co" target="_blank" rel="noopener">Instagram</a><a href="https://facebook.com/lumindra.co" target="_blank" rel="noopener">Facebook</a><a href="https://linkedin.com/in/marktullochbali" target="_blank" rel="noopener">LinkedIn</a></div>
+</div>
+<p class="legal">&copy; Lumindra. Kerobokan, Bali, Indonesia. Prices in Indonesian Rupiah. Sessions in Bali and on Zoom worldwide.</p>
+</div></footer>
+<div class="stick"><a class="btn btn-primary " href="https://wa.me/6282144029645?text=Hi%20Mark%2C%20I%20found%20Lumindra%20online%20and%20would%20like%20to%20talk." target="_blank" rel="noopener">WhatsApp Mark</a></div>
+<script src="/assets/site.js" defer></script>
+</body></html>
