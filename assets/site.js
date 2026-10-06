@@ -41,7 +41,7 @@
     btn.addEventListener('click', function () { setMenu(btn.getAttribute('aria-expanded') !== 'true'); });
     drawer.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
     d.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
-    w.addEventListener('resize', function () { if (w.innerWidth >= 1060) setMenu(false); });
+    w.addEventListener('resize', function () { if (w.innerWidth >= 1180) setMenu(false); });
   }
 
   /* reveal */
