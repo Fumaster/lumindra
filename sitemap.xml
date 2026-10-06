@@ -24,4 +24,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+  <url><loc>https://lumindra.co/human</loc></url>
+  <url><loc>https://lumindra.co/technology</loc></url>
+  <url><loc>https://lumindra.co/proof</loc></url>
+  <url><loc>https://lumindra.co/story</loc></url>
+  <url><loc>https://lumindra.co/contact</loc></url>
 </urlset>
