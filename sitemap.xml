@@ -2,40 +2,86 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lumindra.co/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://lumindra.co/about-mark-tulloch</loc>
-    <lastmod>2026-10-08</lastmod>
+    <loc>https://lumindra.co/technology</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lumindra.co/human</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lumindra.co/proof</loc>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lumindra.co/case-study-sunshooters</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lumindra.co/about-mark-tulloch</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lumindra.co/story</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lumindra.co/books</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lumindra.co/music</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lumindra.co/media</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://lumindra.co/contact</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lumindra.co/hub/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lumindra.co/app/</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.4</priority>
   </url>
-  <url><loc>https://lumindra.co/human</loc></url>
-  <url><loc>https://lumindra.co/technology</loc></url>
-  <url><loc>https://lumindra.co/proof</loc></url>
-  <url><loc>https://lumindra.co/story</loc></url>
-  <url><loc>https://lumindra.co/contact</loc></url>
   <url>
-    <loc>https://lumindra.co/hub/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <loc>https://lumindra.co/llms.txt</loc>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.3</priority>
   </url>
-<url><loc>https://lumindra.co/books</loc><lastmod>2026-10-08</lastmod></url>
-<url><loc>https://lumindra.co/music</loc><lastmod>2026-10-08</lastmod></url>
-<url><loc>https://lumindra.co/media</loc><lastmod>2026-10-08</lastmod></url>
 </urlset>
